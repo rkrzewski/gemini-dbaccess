@@ -4,7 +4,7 @@ Bundle-Name: Test
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.test
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.gemini.dbaccess.test.Activator
-Import-Package: javax.sql,
+Import-Package: javax.sql, 
  org.junit;version="4.5.0",
  org.junit.runner;version="4.5.0",
  org.junit.runner.notification;version="4.5.0",
@@ -12,3 +12,5 @@ Import-Package: javax.sql,
  org.osgi.service.jdbc;version="1.0.0",
  org.osgi.util.tracker;version="1.4.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

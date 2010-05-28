@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Apache Derby JDBC
 Bundle-SymbolicName: org.apache.derby
 Bundle-Version: 10.5.1.1
-Bundle-Activator: org.apache.derby.Activator
+Bundle-Activator: 
 Import-Package: javax.sql,
  org.osgi.framework;version="1.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
