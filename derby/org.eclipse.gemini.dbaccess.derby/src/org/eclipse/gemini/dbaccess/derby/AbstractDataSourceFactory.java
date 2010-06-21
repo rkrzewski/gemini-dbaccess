@@ -59,6 +59,9 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 
 	protected void setDataSourceProperties(Object object, Properties props)
 			throws SQLException {
+
+	    if (props == null) return;
+	    
 		Enumeration enumeration = props.keys();
 		while (enumeration.hasMoreElements()) {
 			String name = (String) enumeration.nextElement();
