@@ -29,7 +29,7 @@
 		<link>
 			<name>OSGi-Source</name>
 			<type>2</type>
-			<location>C:/Documents and Settings/mkeith.ST-MDC/Desktop/Gemini/Source/Gemini DB Access/trunk/org.osgi.service.jdbc/src</location>
+			<locationURI>WORKSPACE_LOC/org.osgi.service.jdbc/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
