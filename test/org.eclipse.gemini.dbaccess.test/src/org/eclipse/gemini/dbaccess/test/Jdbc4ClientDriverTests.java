@@ -1,37 +1,21 @@
-/*
- * Copyright (C) 2010 Oracle Corporation
+/*******************************************************************************
+ * Copyright (c) 2010 Oracle.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * and Apache License v2.0 which accompanies this distribution. 
+ * The Eclipse Public License is available at
+ *     http://www.eclipse.org/legal/epl-v10.html
+ * and the Apache License v2.0 is available at 
+ *     http://www.opensource.org/licenses/apache2.0.php.
+ * You may elect to redistribute this code under either of these licenses.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+ * Contributors:
+ *     mkeith - Gemini DBAccess tests 
+ ******************************************************************************/
 package org.eclipse.gemini.dbaccess.test;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
-
-import javax.sql.ConnectionPoolDataSource;
-import javax.sql.DataSource;
-import javax.sql.PooledConnection;
-import javax.sql.XAConnection;
-import javax.sql.XADataSource;
-
-import org.osgi.framework.BundleContext;
-import org.osgi.service.jdbc.DataSourceFactory;
-import org.osgi.util.tracker.ServiceTracker;
-
-import org.junit.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 
 /**
  * Test class to test OSGi JDBC 4 client driver data source factory service
