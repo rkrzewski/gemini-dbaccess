@@ -33,7 +33,7 @@ public class Activator implements BundleActivator {
 	
     public void start(BundleContext context) throws Exception {
         
-        Hashtable props = new Hashtable();
+        Hashtable<String,String> props = new Hashtable<String,String>();
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_NAME, DataSourceFactoryConstants.DERBY_DRIVER_NAME);
         
         /* Register the JDBC 3 drivers */

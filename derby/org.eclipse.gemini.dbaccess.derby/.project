@@ -25,11 +25,4 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>OSGi-Source</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/org.osgi.service.jdbc/src</location>
-		</link>
-	</linkedResources>
 </projectDescription>

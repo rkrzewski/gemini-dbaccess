@@ -27,10 +27,6 @@ import javax.sql.ConnectionPoolDataSource;
 import javax.sql.DataSource;
 import javax.sql.XADataSource;
 
-import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource;
-import org.apache.derby.jdbc.EmbeddedDataSource;
-import org.apache.derby.jdbc.EmbeddedDriver;
-import org.apache.derby.jdbc.EmbeddedXADataSource;
 import org.osgi.service.jdbc.DataSourceFactory;
 
 /**
@@ -62,7 +58,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 
 	    if (props == null) return;
 	    
-		Enumeration enumeration = props.keys();
+		Enumeration<?> enumeration = props.keys();
 		while (enumeration.hasMoreElements()) {
 			String name = (String) enumeration.nextElement();
 			setProperty(object, name, props.getProperty(name));
@@ -185,7 +181,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 
 	protected void setProperty(Object object, String name, String value)
 			throws SQLException {
-		Class type = object.getClass();
+		Class<?> type = object.getClass();
 
 		java.beans.PropertyDescriptor[] descriptors;
 		try {
@@ -197,7 +193,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 			sqlException.initCause(exc);
 			throw sqlException;
 		}
-		List names = new ArrayList();
+		List<String> names = new ArrayList<String>();
 
 		for (int i = 0; i < descriptors.length; i++) {
 			if (descriptors[i].getWriteMethod() == null) {
@@ -206,7 +202,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 
 			if (descriptors[i].getName().equals(name)) {
 				Method method = descriptors[i].getWriteMethod();
-				Class paramType = method.getParameterTypes()[0];
+				Class<?> paramType = method.getParameterTypes()[0];
 				Object param = toBasicType(value, paramType.getName());
 
 				try {

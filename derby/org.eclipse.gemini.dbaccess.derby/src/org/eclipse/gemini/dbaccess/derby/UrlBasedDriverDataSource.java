@@ -71,7 +71,7 @@ class UrlBasedDriverDataSource implements javax.sql.DataSource {
     }
     
     public <T> T unwrap(Class<T> cls) { 
-        return (this.isWrapperFor(cls)) 
+        return (isWrapperFor(cls)) 
             ? (T) driver 
             : null;
     }
