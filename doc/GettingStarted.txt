@@ -12,23 +12,26 @@ To run Gemini DBAccess in OSGi you will need to have the following:
 1. OSGi Framework
 
 You may use Plugin Development Environment (PDE) in Eclipse, which will give you access to the Equinox 
-OSGi framework, or you may execute outside of PDE and use any OSGi framework you choose, such as Felix. 
+OSGi framework, or you may execute outside of PDE and use any OSGi framework you choose, such as Felix.
 
 2. Database and JDBC driver
 
 You should have installed and started your database server. DBAccess bundles do not start databases or servers. 
-It is assumed that such servers are already running. You must also have the JDBC driver jars. If the driver is
-not already OSGi-ready then you may need to create a bundle (see the User Guide for how to do this).
+It is assumed that such servers are already running. If the driver is not already OSGi-ready then you may need 
+to create a bundle. If the drivers have been packaged with DBAccess then you will not need additional copies.
 
 3. OSGi Enterprise API bundle
 
 Some of the OSGi Enterprise APIs are used by DBAccess so the osgi.enterprise bundle must be resident. It normally 
-includes both the source and the class files so it can be used for both execution and debugging.
+includes both the source and the class files so it can be used for both execution and debugging. It can be obtained
+here: http://www.osgi.org/Download/Release4V42
 
-4. The DBAccess bundles
+4. The Gemini DBAccess bundles
+
+These bundles are shipped with Gemini DBAccess.
 
 There are typically two bundles for each supported database. The first bundle is the JDBC driver bundle 
-and includes the JDBC driver code. If a driver is already OSGi-ready then it may already be bundlized
+and includes the JDBC driver code. If a driver is already OSGi-ready then it should be bundlized
 appropriately. If the driver is not already in an appropriate OSGi bundle then DBAccess will either provide 
 one, or explain how to create one, depending upon whether the driver JARs may be distributed or not.
 
@@ -37,16 +40,16 @@ DataSourceFactory service as specified by the OSGi JDBC specification.
 
 For example, the following bundles provide support for the Derby client/server database: 
 
-- org.apache.derby - the derby JDBC driver jars
-- org.eclipse.gemini.dbaccess.derby - the Gemini supporting classes for Derby
+1. org.apache.derby - the derby JDBC driver jars
+2. org.eclipse.gemini.dbaccess.derby - the Gemini supporting classes for Derby
 
 
 Installation
 ------------
 
-If running in PDE then unzip the files into a directory and import the various projects into your workspace.
-If you are using the framework directly then unzip the distribution files and follow the documentation of
-the framework for installing the bundles.
+If running in PDE then import the various bundles (the framework will already be there) as plug-ins 
+into your workspace. If you are not using PDE, but are using the framework directly then follow the 
+documentation of the framework for installing the bundles.
 
 
 Configuration
