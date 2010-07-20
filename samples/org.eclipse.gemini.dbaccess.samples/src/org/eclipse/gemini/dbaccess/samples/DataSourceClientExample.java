@@ -31,11 +31,11 @@ import org.osgi.util.tracker.ServiceTrackerCustomizer;
 import org.osgi.service.jdbc.DataSourceFactory;
 
 /**
- * Activator to start client code when relevant service becomes available
+ * Example of how to access a DataSource from a client program
  * 
  * @author mkeith
  */
-public class Activator implements BundleActivator, ServiceTrackerCustomizer {
+public class DataSourceClientExample implements BundleActivator, ServiceTrackerCustomizer {
 
     public static final String EMBEDDED_DERBY_DRIVER_NAME = "org.apache.derby.jdbc.EmbeddedDriver";
     public static final String JDBC_4_VERSION = "4.0";
@@ -72,7 +72,7 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer {
 
             // We have a JDBC service, now do something with it
             DataSourceFactory dsf = (DataSourceFactory) service;
-            testDataSource(dsf);
+            useEmbeddedDataSource(dsf);
         }
         return service;
     }
@@ -83,7 +83,7 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer {
 
     /* === Supporting methods === */
 
-    void testDataSource(DataSourceFactory dsf) {
+    void useEmbeddedDataSource(DataSourceFactory dsf) {
         Properties props = new Properties();
         props.put(DataSourceFactory.JDBC_URL, "jdbc:derby:testDB;create=true");
         DataSource ds = null;
