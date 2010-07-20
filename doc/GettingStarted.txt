@@ -20,15 +20,17 @@ You should have installed and started your database server. DBAccess bundles do 
 It is assumed that such servers are already running. If the driver is not already OSGi-ready then you may need 
 to create a bundle. If the drivers have been packaged with DBAccess then you will not need additional copies.
 
+*** Note: The JDBC drivers for the Derby embedded database are shipped with Gemini DBAccess.
+
 3. OSGi Enterprise API bundle
 
 Some of the OSGi Enterprise APIs are used by DBAccess so the osgi.enterprise bundle must be resident. It normally 
 includes both the source and the class files so it can be used for both execution and debugging. It can be obtained
 here: http://www.osgi.org/Download/Release4V42
 
-4. The Gemini DBAccess bundles
+*** Note: This bundle is shipped with Gemini DBAccess.
 
-These bundles are shipped with Gemini DBAccess.
+4. The Gemini DBAccess bundles
 
 There are typically two bundles for each supported database. The first bundle is the JDBC driver bundle 
 and includes the JDBC driver code. If a driver is already OSGi-ready then it should be bundlized
@@ -43,6 +45,7 @@ For example, the following bundles provide support for the Derby client/server d
 1. org.apache.derby - the derby JDBC driver jars
 2. org.eclipse.gemini.dbaccess.derby - the Gemini supporting classes for Derby
 
+*** Note: These bundles are shipped with Gemini DBAccess.
 
 Installation
 ------------
