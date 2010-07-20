@@ -46,7 +46,7 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
     /* === Activator methods === */
     
     public void start(BundleContext context) throws Exception {
-        log("Client active ");
+        log("Client starting ");
         ctx = context;
 
         dsfTracker = new ServiceTracker(ctx, DataSourceFactory.class.getName(), this);
@@ -54,7 +54,7 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
     }
 
     public void stop(BundleContext context) throws Exception {
-        log("Client active ");
+        log("Client stopping ");
         dsfTracker.close();        
     }
 
@@ -99,7 +99,6 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
         } catch (SQLException sqlEx) {
             log("Error creating or using data source: " + sqlEx);
         }
-        log("Client done.");
     }
     
     void log(String msg) { System.out.println("===== " + msg); }
