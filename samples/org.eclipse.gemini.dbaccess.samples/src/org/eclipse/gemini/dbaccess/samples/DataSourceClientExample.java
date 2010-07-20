@@ -10,7 +10,7 @@
  * You may elect to redistribute this code under either of these licenses.
  *
  * Contributors:
- *     mkeith - Gemini DBAccess tests 
+ *     mkeith - Gemini DBAccess examples 
  ******************************************************************************/
 package org.eclipse.gemini.dbaccess.samples;
 
