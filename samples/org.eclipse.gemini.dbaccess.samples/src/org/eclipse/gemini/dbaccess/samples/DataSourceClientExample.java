@@ -46,7 +46,7 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
     /* === Activator methods === */
     
     public void start(BundleContext context) throws Exception {
-        log("Client starting ");
+        log("Sample Gemini DBAccess Client starting");
         ctx = context;
 
         dsfTracker = new ServiceTracker(ctx, DataSourceFactory.class.getName(), this);
@@ -54,7 +54,7 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
     }
 
     public void stop(BundleContext context) throws Exception {
-        log("Client stopping ");
+        log("Sample Gemini DBAccess Client stopping");
         dsfTracker.close();        
     }
 
@@ -68,7 +68,7 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
 
         if (driver != null && driver.equalsIgnoreCase(EMBEDDED_DERBY_DRIVER_NAME) &&
                 version != null && version.equalsIgnoreCase(JDBC_4_VERSION)) {
-            log("Client notified of service: " + driver);
+            log("Sample Gemini DBAccess client notified of service: " + driver);
 
             // We have a JDBC service, now do something with it
             DataSourceFactory dsf = (DataSourceFactory) service;
@@ -92,12 +92,13 @@ public class DataSourceClientExample implements BundleActivator, ServiceTrackerC
             ds = dsf.createDataSource(props);
             conn = ds.getConnection();
             DatabaseMetaData metadata = conn.getMetaData();
-            log("Driver Name: " + metadata.getDriverName());
-            log("Driver Version: " + metadata.getDriverVersion());
-            log("User: " + metadata.getUserName());
+            log("Driver accessed by sample Gemini DBAccess client:" + 
+                "\n\tName = " + metadata.getDriverName() +
+                "\n\tVersion = " + metadata.getDriverVersion() +
+                "\n\tUser = " + metadata.getUserName());
             conn.close();
         } catch (SQLException sqlEx) {
-            log("Error creating or using data source: " + sqlEx);
+            log("Sample Gemini DBAccess client - Error creating or using data source: " + sqlEx);
         }
     }
     

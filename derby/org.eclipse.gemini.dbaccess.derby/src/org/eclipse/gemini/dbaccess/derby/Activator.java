@@ -32,13 +32,13 @@ public class Activator implements BundleActivator {
     private ServiceRegistration embeddedService, clientService, embeddedService4, clientService4;	
 	
     public void start(BundleContext context) throws Exception {
-        
+        System.out.println("Gemini DBAccess Derby starting");
         Hashtable<String,String> props = new Hashtable<String,String>();
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_NAME, DataSourceFactoryConstants.DERBY_DRIVER_NAME);
         
-        /* Register the JDBC 3 drivers */
+        /*=== Register the JDBC 3 drivers ===*/
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_VERSION, DataSourceFactoryConstants.JDBC_3_DRIVER_VERSION);
-        
+
         // Register the embedded driver
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_CLASS, DataSourceFactoryConstants.DERBY_EMBEDDED_DRIVER_CLASS);
         embeddedService = context.registerService( 
@@ -53,7 +53,7 @@ public class Activator implements BundleActivator {
                 new ClientDataSourceFactory(false),
                 props);
 
-        /* Register the JDBC 4 drivers */
+        /*=== Register the JDBC 4 drivers ===*/
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_VERSION, DataSourceFactoryConstants.JDBC_4_DRIVER_VERSION);
         
         // Register the embedded driver

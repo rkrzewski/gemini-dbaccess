@@ -7,7 +7,7 @@ Bundle-Activator: org.eclipse.gemini.dbaccess.samples.DataSourceClientExample
 Import-Package: javax.sql, 
  org.osgi.framework;version="1.3.0",
  org.osgi.service.jdbc;version="1.0.0",
- org.osgi.util.tracker;version="1.4.2"
+ org.osgi.util.tracker;version="1.4"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 
 
