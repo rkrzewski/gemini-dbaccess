@@ -1,5 +1,5 @@
 
-Gemini DBAccess Milestone M1 - July 30, 2010
+Gemini DBAccess Milestone M1 - July 26, 2010
 
 This milestone provides you with database access to the server Derby database version 10.5.1. 
 To access other versions of Derby you may need to replace the derby.jar and derbyclient.jar 
