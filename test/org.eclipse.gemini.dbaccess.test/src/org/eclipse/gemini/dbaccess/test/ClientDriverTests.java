@@ -61,7 +61,7 @@ public class ClientDriverTests extends JdbcTests {
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_NAME,
                 "org.apache.derby.jdbc.ClientDriver");
         props.put(DataSourceFactory.JDBC_URL,
-                "jdbc:derby://localhost:1527/accountDB");
+                "jdbc:derby://localhost:1527/accountDB;create=true");
         props.put(DataSourceFactory.JDBC_USER, "app");
         props.put(DataSourceFactory.JDBC_PASSWORD, "app");
         return props;
