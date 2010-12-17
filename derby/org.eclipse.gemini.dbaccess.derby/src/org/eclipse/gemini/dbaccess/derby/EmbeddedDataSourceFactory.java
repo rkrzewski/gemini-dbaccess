@@ -11,6 +11,7 @@
  *
  * Contributors:
  *     JJ Snyder - Embedded Derby JDBC support 
+ *     mkeith - Inherit from abstract class
  ******************************************************************************/
 
 package org.eclipse.gemini.dbaccess.derby;
@@ -32,6 +33,8 @@ import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource40;
 import org.apache.derby.jdbc.EmbeddedXADataSource;
 import org.apache.derby.jdbc.EmbeddedXADataSource40;
 import org.osgi.service.jdbc.DataSourceFactory;
+
+import org.eclipse.gemini.dbaccess.AbstractDataSourceFactory;
 
 /**
  * A factory for creating Derby embedded data sources. The properties specified
@@ -55,96 +58,36 @@ import org.osgi.service.jdbc.DataSourceFactory;
  *     props.put(DataSourceFactory.JDBC_URL, "jdbc:derby:myDB");
  */
 public class EmbeddedDataSourceFactory extends AbstractDataSourceFactory {
+
+    /** Option to indicate whether to use JDBC 4.0 flavor of the driver */
+    boolean jdbc4 = true;
     
     public EmbeddedDataSourceFactory() {}
     public EmbeddedDataSourceFactory(boolean jdbc4) {
         this.jdbc4 = jdbc4;    
     }
     
-    /**
-	 * Create a Derby DataSource object.
-	 * 
-	 * @param props The properties that define the DataSource implementation to
-	 *        create and how the DataSource is configured.
-	 * @return The configured DataSource.
-	 * @throws SQLException
-	 * @see org.osgi.service.jdbc.DataSourceFactory#createDataSource(java.util.Properties)
-	 */
-	public DataSource createDataSource(Properties props) throws SQLException {
-		if (props == null) {
-			props = new Properties();
-		}
-        if (props.get(DataSourceFactory.JDBC_URL) != null) {
-            return new UrlBasedDriverDataSource(props, true);
-        } else {
-    		DataSource dataSource = (jdbc4) 
-                ? new EmbeddedDataSource40()
-                : new EmbeddedDataSource();
-    		setDataSourceProperties(dataSource, props);
-    		return dataSource;
-        }
-	}
+    public abstract Driver newJdbcDriver() throws SQLException {
+        return new EmbeddedDriver();
+    }
 
-	/**
-	 * Create a Derby ConnectionPoolDataSource object.
-	 * 
-	 * @param props The properties that define the ConnectionPoolDataSource
-	 *        implementation to create and how the ConnectionPoolDataSource is
-	 *        configured.
-	 * @return The configured ConnectionPoolDataSource.
-	 * @throws SQLException
-	 * @see org.osgi.service.jdbc.DataSourceFactory#createConnectionPoolDataSource(java.util.Properties)
-	 */
-	public ConnectionPoolDataSource createConnectionPoolDataSource(
-			Properties props) throws SQLException {
-		if (props == null) {
-			props = new Properties();
-		}
-		ConnectionPoolDataSource dataSource = (jdbc4) 
-		    ? new EmbeddedConnectionPoolDataSource40()
-	        : new EmbeddedConnectionPoolDataSource();
-		setDataSourceProperties(dataSource, props);
-		return dataSource;
-	}
+    public abstract DataSource newDataSource() throws SQLException {
+        return jdbc4
+            ? new EmbeddedDataSource40()
+            : new EmbeddedDataSource();
+    }
 
-	/**
-	 * Create a Derby XADataSource object.
-	 * 
-	 * @param props The properties that define the XADataSource implementation
-	 *        to create and how the XADataSource is configured.
-	 * @return The configured XADataSource.
-	 * @throws SQLException
-	 * @see org.osgi.service.jdbc.DataSourceFactory#createXADataSource(java.util.Properties)
-	 */
-	public XADataSource createXADataSource(Properties props)
-			throws SQLException {
-		if (props == null) {
-			props = new Properties();
-		}
-        XADataSource dataSource = (jdbc4) 
-            ? new EmbeddedXADataSource40()
-            : new EmbeddedXADataSource();
-		setDataSourceProperties(dataSource, props);
-		return dataSource;
-	}
+    public abstract ConnectionPoolDataSource newConnectionPoolDataSource() 
+            throws SQLException {
+        return jdbc4 
+            ? new EmbeddedConnectionPoolDataSource40()
+            : new EmbeddedConnectionPoolDataSource();
+    }
 
-    /**
-     * Create a new org.apache.derby.jdbc.EmbeddedDriver.
-     * 
-     * @param props The properties used to configure the Driver.  Null 
-     *              indicates no properties.
-     *              If the property cannot be set on the Driver being 
-     *              created then a SQLException must be thrown.
-     * @return A configured org.apache.derby.jdbc.EmbeddedDriver.
-     * @throws SQLException If the org.apache.derby.jdbc.EmbeddedDriver cannot be created.
-     */
-	public Driver createDriver(Properties props) throws SQLException {
-		if (props == null) {
-			props = new Properties();
-		}
-		EmbeddedDriver driver = new EmbeddedDriver();
-		setDataSourceProperties(driver, props);
-		return driver;
-	}
-
+    public abstract XADataSource newXADataSource() throws SQLException {
+        return jdbc4 
+            ? new ClientXADataSource40()
+            : new ClientXADataSource();
+    }
+    
 }
