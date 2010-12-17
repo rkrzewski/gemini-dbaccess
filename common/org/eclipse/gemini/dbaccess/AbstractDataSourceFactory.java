@@ -64,7 +64,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
     /*                                                   */
     /* Subclass drivers must return an instance of the   */
     /* appropriate driver class implementing the correct */
-    /* interface.                                        */
+    /* interface return type.                            */
     /*****************************************************/
 
     public abstract Driver newJdbcDriver() throws SQLException;
@@ -76,9 +76,9 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
     public abstract XADataSource newXADataSource() throws SQLException;
 
 
-    /***************/
-    /* Primary API */
-    /***************/
+    /*************************/
+    /* DataSourceFactory API */
+    /*************************/
 
     /**
      * Create a DataSource object.
@@ -149,9 +149,9 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
         return driver;
     }
 
-    /*******************/
-    /* Utility methods */
-    /*******************/
+    /**********************/
+    /* Supporting methods */
+    /**********************/
 
 	protected void setDataSourceProperties(Object object, Properties props)
 			throws SQLException {
@@ -174,8 +174,10 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 	}
 
 	protected Object toBasicType(String value, String type) throws SQLException {
+
         // Early return from first "if" condition that evaluates to true
-		if (value == null)
+
+        if (value == null)
 			return null;
 
         if (type == null || type.equals(String.class.getName()))
