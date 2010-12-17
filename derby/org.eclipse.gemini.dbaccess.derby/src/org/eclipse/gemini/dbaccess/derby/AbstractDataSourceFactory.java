@@ -130,7 +130,7 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 														+ value);
 									}
 
-									return new Character(value.charAt(0));
+									return Character.valueOf(value.charAt(0)); 
 								}
 								else
 									if (type.equals(Byte.class.getName())
