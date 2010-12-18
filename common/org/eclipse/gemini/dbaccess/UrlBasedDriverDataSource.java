@@ -13,7 +13,7 @@
  *     mkeith - URL support for Client/Server Derby JDBC  
  ******************************************************************************/
 
-package org.eclipse.gemini.dbaccess.derby;
+package org.eclipse.gemini.dbaccess;
 
 import java.io.PrintWriter;
 import java.util.Properties;
