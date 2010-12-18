@@ -67,24 +67,24 @@ public class ClientDataSourceFactory extends AbstractDataSourceFactory {
         this.jdbc4 = jdbc4;    
     }
 
-    public abstract Driver newJdbcDriver() throws SQLException {
+    public Driver newJdbcDriver() throws SQLException {
         return new ClientDriver();
     }
 
-    public abstract DataSource newDataSource() throws SQLException {
+    public DataSource newDataSource() throws SQLException {
         return jdbc4
             ? new ClientDataSource40()
             : new ClientDataSource();
     }
 
-    public abstract ConnectionPoolDataSource newConnectionPoolDataSource() 
+    public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return jdbc4 
             ? new ClientConnectionPoolDataSource40()
             : new ClientConnectionPoolDataSource();
     }
 
-    public abstract XADataSource newXADataSource() throws SQLException {
+    public XADataSource newXADataSource() throws SQLException {
         return jdbc4 
             ? new ClientXADataSource40()
             : new ClientXADataSource();

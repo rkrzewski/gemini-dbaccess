@@ -32,6 +32,7 @@ import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource;
 import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource40;
 import org.apache.derby.jdbc.EmbeddedXADataSource;
 import org.apache.derby.jdbc.EmbeddedXADataSource40;
+
 import org.osgi.service.jdbc.DataSourceFactory;
 
 import org.eclipse.gemini.dbaccess.AbstractDataSourceFactory;
@@ -67,27 +68,26 @@ public class EmbeddedDataSourceFactory extends AbstractDataSourceFactory {
         this.jdbc4 = jdbc4;    
     }
     
-    public abstract Driver newJdbcDriver() throws SQLException {
+    public Driver newJdbcDriver() throws SQLException {
         return new EmbeddedDriver();
     }
 
-    public abstract DataSource newDataSource() throws SQLException {
+    public DataSource newDataSource() throws SQLException {
         return jdbc4
             ? new EmbeddedDataSource40()
             : new EmbeddedDataSource();
     }
 
-    public abstract ConnectionPoolDataSource newConnectionPoolDataSource() 
+    public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return jdbc4 
             ? new EmbeddedConnectionPoolDataSource40()
             : new EmbeddedConnectionPoolDataSource();
     }
 
-    public abstract XADataSource newXADataSource() throws SQLException {
+    public XADataSource newXADataSource() throws SQLException {
         return jdbc4 
-            ? new ClientXADataSource40()
-            : new ClientXADataSource();
+            ? new EmbeddedXADataSource40()
+            : new EmbeddedXADataSource();
     }
-    
 }
