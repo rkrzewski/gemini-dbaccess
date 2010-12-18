@@ -41,20 +41,20 @@ public class ClientDataSourceFactory extends AbstractDataSourceFactory {
     
     public ClientDataSourceFactory() {}
 
-    public abstract Driver newJdbcDriver() throws SQLException {
+    public Driver newJdbcDriver() throws SQLException {
         return new com.mysql.jdbc.Driver();
     }
 
-    public abstract DataSource newDataSource() throws SQLException {
+    public DataSource newDataSource() throws SQLException {
         return new MysqlDataSource();
     }
 
-    public abstract ConnectionPoolDataSource newConnectionPoolDataSource() 
+    public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return new MysqlConnectionPoolDataSource();
     }
 
-    public abstract XADataSource newXADataSource() throws SQLException {
+    public XADataSource newXADataSource() throws SQLException {
         return new MysqlXADataSource();
     }
 }
