@@ -238,7 +238,6 @@ public abstract class AbstractDataSourceFactory implements DataSourceFactory {
 		}
 
         throw new SQLException("Unrecognized property type: " + type);
-		return null; // satisfy the compiler
 	}
 
 	protected void setProperty(Object object, String name, String value)
