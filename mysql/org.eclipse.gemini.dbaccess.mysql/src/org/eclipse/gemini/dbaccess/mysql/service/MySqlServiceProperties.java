@@ -10,7 +10,7 @@
  * You may elect to redistribute this code under either of these licenses.
  *
  * Contributors:
- *     tware - Added MySQl constants
+ *     tware - Added MySQL constants
  *     mkeith - Refactorization
  ******************************************************************************/
 
