@@ -16,8 +16,6 @@
 
 package org.eclipse.gemini.dbaccess.derby;
 
-import java.util.Properties;
-
 import java.sql.Driver;
 import java.sql.SQLException;
 
@@ -32,8 +30,6 @@ import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource;
 import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource40;
 import org.apache.derby.jdbc.EmbeddedXADataSource;
 import org.apache.derby.jdbc.EmbeddedXADataSource40;
-
-import org.osgi.service.jdbc.DataSourceFactory;
 
 import org.eclipse.gemini.dbaccess.AbstractDataSourceFactory;
 
@@ -68,16 +64,19 @@ public class EmbeddedDataSourceFactory extends AbstractDataSourceFactory {
         this.jdbc4 = jdbc4;    
     }
     
+    @Override
     public Driver newJdbcDriver() throws SQLException {
         return new EmbeddedDriver();
     }
 
+    @Override
     public DataSource newDataSource() throws SQLException {
         return jdbc4
             ? new EmbeddedDataSource40()
             : new EmbeddedDataSource();
     }
 
+    @Override
     public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return jdbc4 
@@ -85,6 +84,7 @@ public class EmbeddedDataSourceFactory extends AbstractDataSourceFactory {
             : new EmbeddedConnectionPoolDataSource();
     }
 
+    @Override
     public XADataSource newXADataSource() throws SQLException {
         return jdbc4 
             ? new EmbeddedXADataSource40()

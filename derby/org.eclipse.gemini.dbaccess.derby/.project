@@ -29,7 +29,7 @@
 		<link>
 			<name>common</name>
 			<type>2</type>
-			<location>C:/Documents and Settings/mkeith.ST-MDC/Desktop/Gemini/Source/DBAccess/trunk/common</location>
+			<locationURI>DBACCESS_COMMON</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

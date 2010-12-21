@@ -13,5 +13,3 @@ Import-Package: javax.sql,
  org.osgi.service.jdbc;version="[1.0,2.0)"
 Export-Package: org.eclipse.gemini.dbaccess.derby.service,
  org.osgi.service.jdbc
-
-

@@ -67,16 +67,19 @@ public class ClientDataSourceFactory extends AbstractDataSourceFactory {
         this.jdbc4 = jdbc4;    
     }
 
+    @Override
     public Driver newJdbcDriver() throws SQLException {
         return new ClientDriver();
     }
 
+    @Override
     public DataSource newDataSource() throws SQLException {
         return jdbc4
             ? new ClientDataSource40()
             : new ClientDataSource();
     }
 
+    @Override
     public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return jdbc4 
@@ -84,6 +87,7 @@ public class ClientDataSourceFactory extends AbstractDataSourceFactory {
             : new ClientConnectionPoolDataSource();
     }
 
+    @Override
     public XADataSource newXADataSource() throws SQLException {
         return jdbc4 
             ? new ClientXADataSource40()
