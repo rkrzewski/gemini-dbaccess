@@ -16,8 +16,6 @@
 
 package org.eclipse.gemini.dbaccess.mysql;
 
-import java.util.Properties;
-
 import java.sql.Driver;
 import java.sql.SQLException;
 
@@ -41,19 +39,23 @@ public class ClientDataSourceFactory extends AbstractDataSourceFactory {
     
     public ClientDataSourceFactory() {}
 
+    @Override
     public Driver newJdbcDriver() throws SQLException {
         return new com.mysql.jdbc.Driver();
     }
 
+    @Override
     public DataSource newDataSource() throws SQLException {
         return new MysqlDataSource();
     }
 
+    @Override
     public ConnectionPoolDataSource newConnectionPoolDataSource() 
             throws SQLException {
         return new MysqlConnectionPoolDataSource();
     }
 
+    @Override
     public XADataSource newXADataSource() throws SQLException {
         return new MysqlXADataSource();
     }
