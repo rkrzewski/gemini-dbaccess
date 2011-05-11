@@ -2,15 +2,15 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Gemini DBAccess Tests (Incubation)
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.test
-Bundle-Version: 1.0.0.M1-incubation
-Bundle-Activator: org.eclipse.gemini.dbaccess.test.Activator
-Import-Package: javax.sql, 
+Bundle-Version: 1.1.0.qualifier
+Import-Package: javax.sql,
  org.junit;version="4.5.0",
  org.junit.runner;version="4.5.0",
  org.junit.runner.notification;version="4.5.0",
- org.osgi.framework;version="1.3.0",
+ org.osgi.framework;version="1.5.0",
  org.osgi.service.jdbc;version="1.0.0",
  org.osgi.util.tracker;version="1.4"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
 
 

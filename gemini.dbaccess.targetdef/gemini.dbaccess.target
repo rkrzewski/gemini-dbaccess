@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="Gemini DBAccess Target Platform" sequenceNumber="0">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="org.eclipse.core.runtime" version="0.0.0"/>
+<unit id="org.eclipse.core.runtime.source" version="0.0.0"/>
+<unit id="org.eclipse.osgi.source" version="0.0.0"/>
+<unit id="org.junit" version="0.0.0"/>
+<repository location="http://download.eclipse.org/eclipse/updates/3.6/"/>
+</location>
+</locations>
+<targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+</target>

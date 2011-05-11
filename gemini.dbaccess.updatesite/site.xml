@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true">
+   <feature url="org.eclipse.gemini.dbaccess.feature_0.0.0.jar" id="org.eclipse.gemini.dbaccess.feature" version="0.0.0">
+      <category name="Gemini"/>
+   </feature>
+   <category-def name="Gemini" label="Gemini"/>
+</site>

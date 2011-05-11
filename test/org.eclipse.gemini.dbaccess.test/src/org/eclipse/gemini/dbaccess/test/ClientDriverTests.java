@@ -43,7 +43,7 @@ public class ClientDriverTests extends JdbcTests {
         dsf = null;
     }
     
-    Properties getDataSourceProperties() {
+    protected Properties getDataSourceProperties() {
         Properties props = new Properties();
         props.put(DataSourceFactory.JDBC_SERVER_NAME, "localhost");
         props.put(DataSourceFactory.JDBC_PORT_NUMBER, "1527");
@@ -56,7 +56,7 @@ public class ClientDriverTests extends JdbcTests {
         return props;
     }
 
-    Properties getUrlProperties() {
+    protected Properties getUrlProperties() {
         Properties props = new Properties();
         props.put(DataSourceFactory.OSGI_JDBC_DRIVER_NAME,
                 "org.apache.derby.jdbc.ClientDriver");

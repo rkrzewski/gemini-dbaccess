@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (c) 2010 SAP AG.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        ktsvetkov - initial implementation
+ -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <groupId>org.eclipse</groupId>
+  <artifactId>gemini.dbaccess.parent</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Gemini DBAccess Parent (Incubation)</name>
+
+  <properties>
+    <tycho-version>0.11.0</tycho-version>
+  </properties>
+
+  <modules>
+	<module>../gemini.dbaccess.targetdef</module>
+	<module>../osgi.enterprise</module>
+	<module>../derby/org.apache.derby</module>
+	<module>../derby/org.eclipse.gemini.dbaccess.derby</module>
+	<module>../samples/org.eclipse.gemini.dbaccess.samples</module>
+	<module>../test/org.eclipse.gemini.dbaccess.test</module>
+	<module>../gemini.dbaccess.feature</module>
+	<module>../gemini.dbaccess.updatesite</module>
+  </modules>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+	<plugin>
+		<groupId>org.sonatype.tycho</groupId>
+		<artifactId>target-platform-configuration</artifactId>
+		<version>${tycho-version}</version>
+		<configuration>
+			<resolver>p2</resolver>
+		</configuration>
+	</plugin>
+   </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.sonatype.tycho</groupId>
+          <artifactId>maven-osgi-compiler-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <configuration>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.4.1</version>
+          <configuration>
+            <encoding>ISO-8859-1</encoding>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.tycho</groupId>
+          <artifactId>target-platform-configuration</artifactId>
+          <version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<target>
+						<artifact>
+							<groupId>org.eclipse</groupId>
+							<artifactId>org.eclipse.gemini.dbaccess.targetdef</artifactId>
+							<version>1.1.0-SNAPSHOT</version>
+							<classifier>gemini.dbaccess</classifier>
+						</artifact>
+					</target>
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+				</configuration>
+        </plugin>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>findbugs-maven-plugin</artifactId>
+			<version>2.3</version>
+			<configuration>
+				<findbugsXmlOutput>true</findbugsXmlOutput>
+				<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+				<xmlOutput>true</xmlOutput>
+			</configuration>
+		</plugin>		
+      </plugins>
+    </pluginManagement>
+  	<sourceDirectory>src</sourceDirectory>
+  </build>
+</project>
+

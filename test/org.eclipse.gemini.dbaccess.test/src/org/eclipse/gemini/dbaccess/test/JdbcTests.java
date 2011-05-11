@@ -25,12 +25,16 @@ import javax.sql.PooledConnection;
 import javax.sql.XAConnection;
 import javax.sql.XADataSource;
 
+import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.jdbc.DataSourceFactory;
 
 import org.junit.*;
+
+import static org.junit.Assert.*;
 
 /**
  * Abstract test class to test OSGi JDBC data source factory services
@@ -45,8 +49,17 @@ public abstract class JdbcTests {
     //-------------------------------------------
     // Test classes must override these methods
     //-------------------------------------------
-    abstract Properties getUrlProperties();
-    abstract Properties getDataSourceProperties();
+    protected abstract Properties getUrlProperties();
+    protected abstract Properties getDataSourceProperties();
+	private static final String ORG_ECLIPSE_GEMINI_DBACCESS = "org.eclipse.gemini.dbaccess.derby";
+
+
+	@BeforeClass
+	public static void setUpClass() throws Exception {
+		context = FrameworkUtil.getBundle(JdbcTests.class).getBundleContext();
+		assertNotNull("Bundle context is null", context);
+		startBundle(ORG_ECLIPSE_GEMINI_DBACCESS);
+	}
 
     //-------------------------------------------
     // Test methods
@@ -115,7 +128,7 @@ public abstract class JdbcTests {
         xa_con.close();
     }
 
-    @Test
+    @Test(expected=SQLException.class)
     public void testErrorCase1() throws Exception {
         log("testErrorCase");
         try {
@@ -123,48 +136,68 @@ public abstract class JdbcTests {
             ds.getConnection();
         } catch (SQLException sqlEx) {
             log("Caught expected exception: " + sqlEx);
-            return;
+            throw sqlEx;
         }
-        assert(false);
     }
 
     //-------------------------------------------
     // Helper methods
     //-------------------------------------------
 
-    Properties getErrorProperties() {
+    private Properties getErrorProperties() {
         Properties props = new Properties();
         props.put("errorProperty", "errorValue");
         return props;
     }
     
-    void executeJdbcStatement(Connection con) throws Exception {
+    private void executeJdbcStatement(Connection con) throws Exception {
         Statement stmt = con.createStatement();
         boolean result = stmt.execute("SET CURRENT SCHEMA USER");
         log("SQL result: " + result);
         stmt.close();
     }
 
-    public static DataSourceFactory lookupDsf(String driverName, String version) {
+    protected static DataSourceFactory lookupDsf(String driverName, String version) {
         log("Lookup (" + driverName + ", " + version + ")");
         String filter = "(&("+DataSourceFactory.OSGI_JDBC_DRIVER_CLASS+"="+driverName+")("+
                          DataSourceFactory.OSGI_JDBC_DRIVER_VERSION+"="+version+"))";
         log("Filter is: " + filter);
         ServiceReference[] refs = null;
         try {
-            refs = context.getServiceReferences(DataSourceFactory.class.getName(), filter);
+            refs = getContext().getServiceReferences(DataSourceFactory.class.getName(), filter);
         } catch (InvalidSyntaxException isEx) {
             new RuntimeException("Bad filter", isEx);
         }
         log("DSF Service refs looked up from registry: " + refs);
         return (refs == null)
             ? null
-            : (DataSourceFactory) context.getService(refs[0]);
+            : (DataSourceFactory) getContext().getService(refs[0]);
     }
     
-    static void log(String msg) {
+	private static BundleContext getContext() {
+		return context;
+	}
+    
+    protected static void log(String msg) {
         System.out.println("*** JdbcTest: " + msg);
     }
     
+	private static void startBundle(String name) throws Exception {
+		Bundle bundle = getBundle(name);
+		Assert.assertNotNull("Could not find bundle [" + name + "]", bundle);
+		if (bundle.getState() != Bundle.ACTIVE) {
+			bundle.start();
+		}
+	}
+	
+	private static Bundle getBundle(String symbolicName) {
+		Bundle[] bundles = context.getBundles();
+		for (Bundle bundle : bundles) {
+			if (bundle.getSymbolicName().equals(symbolicName)) {
+				return bundle;
+			}
+		}
+		return null;
+	}
     
 }

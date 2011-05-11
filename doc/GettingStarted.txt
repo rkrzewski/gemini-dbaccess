@@ -47,6 +47,36 @@ For example, the following bundles provide support for the Derby client/server d
 
 *** Note: These bundles are shipped with Gemini DBAccess.
 
+Maven Build
+-----------
+
+1) Install Maven 3.
+2) You may need to configure the proxy settings. In case you are behind a firewall, edit the file 
+/mvn_parent/settings.xml and replace the TODOs with the right proxy settings.
+3) To execute the build, go into /mvn_parent and run on the command line:
+> mvn clean install
+or, if you have configured the settings.xml:
+> mvn -fae -s settings.xml clean install
+
+
+Some remarks on what the build does:
+- the folder /mvn_parent contains a pom.xml which is the "parent" of all
+subprojects. Every bundle which is build has its own pom.xml file
+- it builds every bundle (result as usually for maven is under /target in the
+respective directory)
+- A feature, which currently includes everything except the tests, is also built.
+- An update site is generated: /gemini.dbaccess.updatesite . When this is build, you
+should find there under /target/site/ a p2 repository containing the feature
+and all plugins included into it. 
+- currently not all tests are executed
+- If you add findbugs:findbugs at the end of the command line, you'll find in the different
+/target directories which are produced some information from findbugs. This could be aggregated 
+and displayed in late stage by Hudson. To try it, just run:
+> mvn clean install findbugs:findbugs
+or, if you have configured the settings.xml:
+> mvn -fae -s settings.xml clean install findbugs:findbugs
+
+
 Installation
 ------------
 
@@ -54,8 +84,5 @@ If running in PDE then import the various bundles (the framework will already be
 into your workspace. If you are not using PDE, but are using the framework directly then follow the 
 documentation of the framework for installing the bundles.
 
-
-Configuration
--------------
-
-Gemini DBAccess does not require any special environment configuration.
+To run compile the projects in Eclipse, you have to open the gemini.dbaccess.targetdef project, 
+open the file gemini.dbaccess.target with the Target Editor and execute "Set as Target Platform"
