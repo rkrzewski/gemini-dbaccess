@@ -4,7 +4,7 @@ Bundle-Name: Gemini DBAccess
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.derby
 Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.eclipse.gemini.dbaccess.derby.Activator
-Bundle-Vendor: Oracle Corporation
+Bundle-Vendor: Eclipse Gemini
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Import-Package: javax.sql,
  org.apache.derby.client.am,
