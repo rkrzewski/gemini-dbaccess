@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Gemini DBAccess Samples (Incubation)
+Bundle-Name: Gemini DBAccess Samples
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.samples
 Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.eclipse.gemini.dbaccess.samples.DataSourceClientExample
