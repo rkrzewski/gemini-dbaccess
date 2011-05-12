@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Gemini DBAccess Tests (Incubation)
+Bundle-Name: Gemini DBAccess Tests
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.test
 Bundle-Version: 1.1.0.qualifier
 Import-Package: javax.sql,
