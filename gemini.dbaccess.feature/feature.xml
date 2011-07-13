@@ -22,20 +22,6 @@
       <update label="%updateSiteName" url="http://download.eclipse.org/TODO/update-site/"/>
    </url>
 
-<!--
-   <requires>
-      <import plugin="org.eclipse.birt.chart.engine" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.mat.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.forms" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.birt.chart.device.extension" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.birt.chart.device.swt" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.birt.chart.engine.extension" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.birt.core" version="2.2.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.mat.feature" version="1.0.0" match="greaterOrEqual"/>
-   </requires>
--->
-
    <plugin
          id="osgi.enterprise"
          version="0.0.0"
