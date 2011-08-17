@@ -19,26 +19,34 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="http://download.eclipse.org/TODO/update-site/"/>
+      <update label="%updateSiteName" url="http://download.eclipse.org/gemini/dbaccess/update-site/"/>
    </url>
 
    <plugin
          id="osgi.enterprise"
+         download-size="0"
+         install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.derby"
+         download-size="0"
+         install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gemini.dbaccess.derby"
+         download-size="0"
+         install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gemini.dbaccess.samples"
+         download-size="0"
+         install-size="0"
          version="0.0.0"
          unpack="false"/>
 
