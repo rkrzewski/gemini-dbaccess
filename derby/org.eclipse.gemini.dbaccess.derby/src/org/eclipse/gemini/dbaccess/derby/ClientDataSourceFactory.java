@@ -10,12 +10,10 @@
  * You may elect to redistribute this code under either of these licenses.
  *
  * Contributors:
- *     mkeith - CLient/Server Derby JDBC support 
+ *     mkeith - Client/Server Derby JDBC support 
  ******************************************************************************/
 
 package org.eclipse.gemini.dbaccess.derby;
-
-import java.util.Properties;
 
 import java.sql.Driver;
 import java.sql.SQLException;
@@ -24,6 +22,8 @@ import javax.sql.DataSource;
 import javax.sql.ConnectionPoolDataSource;
 import javax.sql.XADataSource;
 
+import org.eclipse.gemini.dbaccess.AbstractDataSourceFactory;
+
 import org.apache.derby.jdbc.ClientConnectionPoolDataSource;
 import org.apache.derby.jdbc.ClientConnectionPoolDataSource40;
 import org.apache.derby.jdbc.ClientDriver;
@@ -31,8 +31,6 @@ import org.apache.derby.jdbc.ClientDataSource;
 import org.apache.derby.jdbc.ClientDataSource40;
 import org.apache.derby.jdbc.ClientXADataSource;
 import org.apache.derby.jdbc.ClientXADataSource40;
-
-import org.osgi.service.jdbc.DataSourceFactory;
 
 /**
  * A factory for creating Derby network data sources. The properties specified
@@ -61,84 +59,38 @@ import org.osgi.service.jdbc.DataSourceFactory;
  */
 public class ClientDataSourceFactory extends AbstractDataSourceFactory {
     
+    /** Option to indicate whether to use JDBC 4.0 flavor of the driver */
+    boolean jdbc4 = true;
+
     public ClientDataSourceFactory() {}
     public ClientDataSourceFactory(boolean jdbc4) {
         this.jdbc4 = jdbc4;    
     }
-    
-    /**
-     * Create a Derby DataSource object.
-     * 
-     * @param props The properties that define the DataSource implementation to
-     *        create and how the DataSource is configured.
-     * @return The configured DataSource.
-     * @throws SQLException
-     * @see org.osgi.service.jdbc.DataSourceFactory#createDataSource(java.util.Properties)
-     */
-    public DataSource createDataSource(Properties props) throws SQLException {
-        if (props == null) props = new Properties();
-        if (props.get(DataSourceFactory.JDBC_URL) != null) {
-            return new UrlBasedDriverDataSource(props, false);
-        } else {
-            DataSource dataSource = (jdbc4) 
-                ? new ClientDataSource40()
-                : new ClientDataSource();
-            setDataSourceProperties(dataSource, props);
-            return dataSource;
-        }
+
+    @Override
+    public Driver newJdbcDriver() throws SQLException {
+        return new ClientDriver();
     }
 
-    /**
-     * Create a Derby ConnectionPoolDataSource object.
-     * 
-     * @param props The properties that define the ConnectionPoolDataSource
-     *        implementation to create and how the ConnectionPoolDataSource is
-     *        configured.
-     * @return The configured ConnectionPoolDataSource.
-     * @throws SQLException
-     * @see org.osgi.service.jdbc.DataSourceFactory#createConnectionPoolDataSource(java.util.Properties)
-     */
-    public ConnectionPoolDataSource createConnectionPoolDataSource(Properties props) throws SQLException {
-        if (props == null) props = new Properties();
-        ConnectionPoolDataSource dataSource = (jdbc4) 
+    @Override
+    public DataSource newDataSource() throws SQLException {
+        return jdbc4
+            ? new ClientDataSource40()
+            : new ClientDataSource();
+    }
+
+    @Override
+    public ConnectionPoolDataSource newConnectionPoolDataSource() 
+            throws SQLException {
+        return jdbc4 
             ? new ClientConnectionPoolDataSource40()
             : new ClientConnectionPoolDataSource();
-        setDataSourceProperties(dataSource, props);
-        return dataSource;
     }
 
-    /**
-     * Create a Derby XADataSource object.
-     * 
-     * @param props The properties that define the XADataSource implementation
-     *        to create and how the XADataSource is configured.
-     * @return The configured XADataSource.
-     * @throws SQLException
-     * @see org.osgi.service.jdbc.DataSourceFactory#createXADataSource(java.util.Properties)
-     */
-    public XADataSource createXADataSource(Properties props) throws SQLException {
-        if (props == null) props = new Properties();
-        XADataSource dataSource = (jdbc4) 
+    @Override
+    public XADataSource newXADataSource() throws SQLException {
+        return jdbc4 
             ? new ClientXADataSource40()
             : new ClientXADataSource();
-        setDataSourceProperties(dataSource, props);
-        return dataSource;
     }
-
-    /**
-     * Create a new org.apache.derby.jdbc.EmbeddedDriver.
-     * 
-     * @param props The properties used to configure the Driver.  Null 
-     *              indicates no properties.
-     *              If the property cannot be set on the Driver being 
-     *              created then a SQLException must be thrown.
-     * @return A configured org.apache.derby.jdbc.EmbeddedDriver.
-     * @throws SQLException If the org.apache.derby.jdbc.ClientDriver cannot be created.
-     */
-    public Driver createDriver(Properties props) throws SQLException {
-        // Properties not used when accessing the raw driver.
-        Driver driver = new ClientDriver();
-        setDataSourceProperties(driver, props);
-        return driver;
-    }  
 }

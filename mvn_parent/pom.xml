@@ -33,8 +33,11 @@
   <modules>
 	<module>../gemini.dbaccess.targetdef</module>
 	<module>../osgi.enterprise</module>
+	<module>../org.eclipse.gemini.dbaccess.util</module>
 	<module>../derby/org.apache.derby</module>
 	<module>../derby/org.eclipse.gemini.dbaccess.derby</module>
+	<module>../mysql/com.mysql.jdbc</module>
+	<module>../mysql/org.eclipse.gemini.dbaccess.mysql</module>
 	<module>../samples/org.eclipse.gemini.dbaccess.samples</module>
 	<module>../test/org.eclipse.gemini.dbaccess.test</module>
 	<module>../gemini.dbaccess.feature</module>

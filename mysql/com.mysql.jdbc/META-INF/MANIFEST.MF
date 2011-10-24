@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MySQL Mock
+Bundle-SymbolicName: com.mysql.jdbc
+Bundle-Version: 0.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: 
+ javax.sql
+Export-Package: com.mysql.jdbc,
+ com.mysql.jdbc.jdbc2.optional

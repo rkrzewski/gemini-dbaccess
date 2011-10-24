@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Util
+Bundle-SymbolicName: org.eclipse.gemini.dbaccess.util
+Bundle-Version: 1.1.0.qualifier
+Bundle-Vendor: Eclipse
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.gemini.dbaccess,
+ org.eclipse.gemini.jdbc
+Import-Package: org.osgi.service.jdbc;version="1.0.0"
+
