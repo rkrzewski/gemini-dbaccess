@@ -41,6 +41,7 @@
 	<module>../samples/org.eclipse.gemini.dbaccess.samples</module>
 	<module>../test/org.eclipse.gemini.dbaccess.test</module>
 	<module>../gemini.dbaccess.feature</module>
+	<module>../gemini.dbaccess.mysql.feature</module>
 	<module>../gemini.dbaccess.updatesite</module>
   </modules>
 
