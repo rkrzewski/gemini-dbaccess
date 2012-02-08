@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Apache Derby JDBC
 Bundle-SymbolicName: org.apache.derby
-Bundle-Version: 10.5.1.1
+Bundle-Version: 10.8.2.2
 Import-Package: javax.sql,javax.net,
  javax.naming,javax.naming.spi,
  javax.crypto,javax.crypto.spec,
