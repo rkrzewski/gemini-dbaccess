@@ -1,0 +1,5 @@
+This is a fork of Eclipse Gemini DBAccess with added PostgreSQL support.
+
+http://www.eclipse.org/gemini/dbaccess/
+
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=328310
