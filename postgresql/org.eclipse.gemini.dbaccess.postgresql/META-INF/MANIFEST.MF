@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1328132270373
+Bundle-Activator: org.eclipse.gemini.dbaccess.postgresql.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: PostgreSQL
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: org.eclipse.gemini.dbaccess.postgresql
+Bundle-Version: 1.1.0.qualifier
+Export-Package: org.eclipse.gemini.dbaccess.postgresql;uses:="org.osgi.f
+ ramework.wiring,org.osgi.framework,org.osgi.service.jdbc,org.postgresql
+ .xa,org.postgresql.ds,javax.sql,org.postgresql,org.eclipse.gemini.dbacc
+ ess",org.eclipse.gemini.dbaccess.postgresql.service
+Import-Package: javax.sql,org.eclipse.gemini.dbaccess,org.osgi.framework
+ ;version="[1.6,2)",org.osgi.framework.wiring;version="[1.0,2)",org.osgi
+ .service.jdbc;version="[1.0,2)",org.postgresql;version="[3,5)",org.post
+ gresql.ds;version="[3,5)",org.postgresql.xa;version="[3,5)"
+Tool: Bnd-1.51.0
+
