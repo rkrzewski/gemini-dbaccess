@@ -1,0 +1,30 @@
+changes detected by CLIRR:
+
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MAJORVERSION has been changed
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MINORVERSION has been changed
+ERROR: 7012: org.postgresql.core.BaseConnection: Method 'public int getTransactionState()' has been added to an interface
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getLogLevel()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getProtocolVersion()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setLogLevel(int)' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setProtocolVersion(int)' has been added
+INFO: 7011: org.postgresql.jdbc2.AbstractJdbc2Connection: Method 'protected void checkClosed()' has been added
+INFO: 7011: org.postgresql.jdbc2.AbstractJdbc2Connection: Method 'public int getTransactionState()' has been added
+INFO: 6000: org.postgresql.jdbc2.AbstractJdbc2Statement: Added protected field lastWarning
+WARNING: 6003: org.postgresql.util.PSQLDriverVersion: Value of compile-time constant buildNumber has been changed
+
+changes affecting public API:
+
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MAJORVERSION has been changed
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MINORVERSION has been changed
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getLogLevel()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getProtocolVersion()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setLogLevel(int)' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setProtocolVersion(int)' has been added
+
+actual public API changes:
+
+org.postgresql.ds.common
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getLogLevel()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public int getProtocolVersion()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setLogLevel(int)' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setProtocolVersion(int)' has been added

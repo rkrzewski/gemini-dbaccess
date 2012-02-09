@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PostgreSQL JDBC3 Driver
+Bundle-SymbolicName: org.postgresql.jdbc3
+Bundle-Version: 9.0.802
+Export-Package: org.postgresql;uses:="org.postgresql.util,org.postgresql
+ .largeobject,org.postgresql.fastpath,org.postgresql.copy";version="3.0.
+ 0",org.postgresql.copy;uses:="org.postgresql.util,org.postgresql";versi
+ on="3.0.0",org.postgresql.ds;uses:="javax.sql,org.postgresql,org.postgr
+ esql.ds.common";version="3.0.0",org.postgresql.ds.common;uses:="javax.n
+ aming,org.postgresql,org.postgresql.ds,javax.naming.spi";version="3.1.0
+ ",org.postgresql.fastpath;uses:="org.postgresql.util";version="3.0.0",o
+ rg.postgresql.geometric;uses:="org.postgresql.util";version="3.0.0",org
+ .postgresql.largeobject;uses:="org.postgresql.fastpath,org.postgresql.u
+ til";version="3.0.0",org.postgresql.ssl;uses:="javax.net,org.postgresql
+ .util,javax.net.ssl";version="3.0.0",org.postgresql.util;uses:="org.pos
+ tgresql";version="3.0.0",org.postgresql.xa;uses:="org.postgresql.util,o
+ rg.postgresql.ds,javax.sql,org.postgresql,javax.transaction.xa,javax.na
+ ming,org.postgresql.ds.common";version="3.0.0"
+Import-Package: javax.naming,javax.naming.spi,javax.net,javax.net.ssl,ja
+ vax.security.auth,javax.security.auth.callback,javax.security.auth.logi
+ n,javax.sql,javax.transaction.xa,org.ietf.jgss
+Tool: Bnd-1.51.0
+Bundle-ClassPath: .,postgresql-9.0-802.jdbc3.jar
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

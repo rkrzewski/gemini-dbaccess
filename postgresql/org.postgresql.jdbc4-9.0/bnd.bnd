@@ -1,0 +1,13 @@
+-buildpath: postgresql-9.0-802.jdbc4.jar;version=file
+Export-Package: org.postgresql;version=4.0.0,\
+	org.postgresql.copy;version=4.0.0,\
+	org.postgresql.ds;version=4.0.0,\
+	org.postgresql.ds.common;version=4.1.0,\
+	org.postgresql.fastpath;version=4.0.0,\
+	org.postgresql.geometric;version=4.0.0,\
+	org.postgresql.largeobject;version=4.0.0,\
+	org.postgresql.ssl;version=4.0.0,\
+	org.postgresql.util;version=4.0.0,\
+	org.postgresql.xa;version=4.0.0
+Private-Package: *
+Import-Package: *

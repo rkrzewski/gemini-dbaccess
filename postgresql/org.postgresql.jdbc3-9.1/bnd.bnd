@@ -1,0 +1,13 @@
+-buildpath: postgresql-9.1-901.jdbc3.jar;version=file
+Export-Package: org.postgresql;version=3.1.0,\
+	org.postgresql.copy;version=3.0.0,\
+	org.postgresql.ds;version=3.0.0,\
+	org.postgresql.ds.common;version=3.2.0,\
+	org.postgresql.fastpath;version=3.0.0,\
+	org.postgresql.geometric;version=3.0.0,\
+	org.postgresql.largeobject;version=3.0.0,\
+	org.postgresql.ssl;version=3.0.0,\
+	org.postgresql.util;version=3.0.0,\
+	org.postgresql.xa;version=3.0.0
+Private-Package: *
+Import-Package: *

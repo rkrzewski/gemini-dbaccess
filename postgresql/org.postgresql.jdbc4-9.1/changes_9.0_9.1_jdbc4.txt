@@ -1,0 +1,98 @@
+changes detected by CLIRR:
+
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MINORVERSION has been changed
+INFO: 7011: org.postgresql.Driver: Method 'public java.util.logging.Logger getParentLogger()' has been added
+ERROR: 7006: org.postgresql.Driver: Return type of method 'public java.sql.SQLException notImplemented(java.lang.Class, java.lang.String)' has been changed to java.sql.SQLFeatureNotSupportedException
+ERROR: 7004: org.postgresql.core.Field: In method 'public boolean getAutoIncrement(java.sql.Connection)' the number of arguments has changed
+ERROR: 7004: org.postgresql.core.Field: In method 'public java.lang.String getColumnName(java.sql.Connection)' the number of arguments has changed
+ERROR: 7004: org.postgresql.core.Field: In method 'public int getNullable(java.sql.Connection)' the number of arguments has changed
+INFO: 7011: org.postgresql.core.Field: Method 'public java.lang.String getSchemaName()' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public java.lang.String getTableName()' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public void setAutoIncrement(boolean)' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public void setColumnName(java.lang.String)' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public void setNullable(int)' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public void setSchemaName(java.lang.String)' has been added
+INFO: 7011: org.postgresql.core.Field: Method 'public void setTableName(java.lang.String)' has been added
+INFO: 6000: org.postgresql.core.QueryExecutor: Added public field QUERY_DISALLOW_BATCHING
+INFO: 8000: org.postgresql.core.SetupQueryRunner: Class org.postgresql.core.SetupQueryRunner added
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource to the list of superclasses
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource to the list of superclasses
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public java.lang.String getDescription()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public boolean isDefaultAutoCommit()' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public void setDefaultAutoCommit(boolean)' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public java.lang.String getApplicationName()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setApplicationName(java.lang.String)' has been added
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource to the list of superclasses
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource to the list of superclasses
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public java.lang.String getDescription()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public boolean isDefaultAutoCommit()' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public void setDefaultAutoCommit(boolean)' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public java.lang.String getApplicationName()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setApplicationName(java.lang.String)' has been added
+INFO: 8000: org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource: Class org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource added
+INFO: 8000: org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource: Class org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource added
+INFO: 7011: org.postgresql.ds.jdbc4.AbstractJdbc4PooledConnection: Method 'public java.util.logging.Logger getParentLogger()' has been added
+INFO: 7011: org.postgresql.ds.jdbc4.AbstractJdbc4PoolingDataSource: Method 'public java.util.logging.Logger getParentLogger()' has been added
+INFO: 7011: org.postgresql.ds.jdbc4.AbstractJdbc4SimpleDataSource: Method 'public java.util.logging.Logger getParentLogger()' has been added
+INFO: 7011: org.postgresql.jdbc2.AbstractJdbc2DatabaseMetaData: Method 'protected java.sql.ResultSet getProcedureColumns(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc2.AbstractJdbc2DatabaseMetaData: Method 'protected java.sql.ResultSet getProcedures(int, java.lang.String, java.lang.String, java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc2.AbstractJdbc2DatabaseMetaData: Method 'protected java.sql.ResultSet getSchemas(int, java.lang.String, java.lang.String)' has been added
+INFO: 5000: org.postgresql.jdbc2.optional.ConnectionPool: Added org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource to the list of superclasses
+INFO: 5000: org.postgresql.jdbc2.optional.ConnectionPool: Added org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource to the list of superclasses
+INFO: 7011: org.postgresql.jdbc3.AbstractJdbc3DatabaseMetaData: Method 'public java.sql.ResultSet getSchemas()' has been added
+INFO: 7011: org.postgresql.jdbc4.AbstractJdbc4DatabaseMetaData: Method 'public boolean generatedKeyAlwaysReturned()' has been added
+INFO: 7011: org.postgresql.jdbc4.AbstractJdbc4DatabaseMetaData: Method 'public java.sql.ResultSet getProcedureColumns(java.lang.String, java.lang.String, java.lang.String, java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc4.AbstractJdbc4DatabaseMetaData: Method 'public java.sql.ResultSet getProcedures(java.lang.String, java.lang.String, java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc4.AbstractJdbc4DatabaseMetaData: Method 'public java.sql.ResultSet getPseudoColumns(java.lang.String, java.lang.String, java.lang.String, java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public void abort(java.util.concurrent.Executor)' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public int getNetworkTimeout()' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public java.util.logging.Logger getParentLogger()' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public java.lang.String getSchema()' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public void setNetworkTimeout(java.util.concurrent.Executor, int)' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4Connection: Method 'public void setSchema(java.lang.String)' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4ResultSet: Method 'public java.lang.Object getObject(java.lang.String, java.lang.Class)' has been added
+INFO: 7011: org.postgresql.jdbc4.Jdbc4ResultSet: Method 'public java.lang.Object getObject(int, java.lang.Class)' has been added
+WARNING: 6003: org.postgresql.util.PSQLDriverVersion: Value of compile-time constant buildNumber has been changed
+INFO: 7010: org.postgresql.xa.PGXAConnection: Accessibility of method 'PGXAConnection(org.postgresql.core.BaseConnection)' has been increased from package to public
+INFO: 5000: org.postgresql.xa.PGXADataSource: Added org.postgresql.xa.jdbc3.AbstractJdbc3XADataSource to the list of superclasses
+INFO: 5000: org.postgresql.xa.PGXADataSource: Added org.postgresql.xa.jdbc4.AbstractJdbc4XADataSource to the list of superclasses
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'protected javax.naming.Reference createReference()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public java.lang.String getDescription()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public javax.sql.XAConnection getXAConnection()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public javax.sql.XAConnection getXAConnection(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
+INFO: 8000: org.postgresql.xa.jdbc3.AbstractJdbc3XADataSource: Class org.postgresql.xa.jdbc3.AbstractJdbc3XADataSource added
+INFO: 8000: org.postgresql.xa.jdbc4.AbstractJdbc4XADataSource: Class org.postgresql.xa.jdbc4.AbstractJdbc4XADataSource added
+
+changes affecting public API:
+
+WARNING: 6003: org.postgresql.Driver: Value of compile-time constant MINORVERSION has been changed
+INFO: 7011: org.postgresql.Driver: Method 'public java.util.logging.Logger getParentLogger()' has been added
+ERROR: 7006: org.postgresql.Driver: Return type of method 'public java.sql.SQLException notImplemented(java.lang.Class, java.lang.String)' has been changed to java.sql.SQLFeatureNotSupportedException
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource to the list of superclasses
+INFO: 5000: org.postgresql.ds.PGConnectionPoolDataSource: Added org.postgresql.ds.jdbc4.AbstractJdbc4ConnectionPoolDataSource to the list of superclasses
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public java.lang.String getDescription()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public javax.sql.PooledConnection getPooledConnection(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public boolean isDefaultAutoCommit()' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7000: org.postgresql.ds.PGConnectionPoolDataSource: Method 'public void setDefaultAutoCommit(boolean)' is now implemented in superclass org.postgresql.ds.jdbc23.AbstractJdbc23ConnectionPoolDataSource
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public java.lang.String getApplicationName()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setApplicationName(java.lang.String)' has been added
+INFO: 5000: org.postgresql.xa.PGXADataSource: Added org.postgresql.xa.jdbc3.AbstractJdbc3XADataSource to the list of superclasses
+INFO: 5000: org.postgresql.xa.PGXADataSource: Added org.postgresql.xa.jdbc4.AbstractJdbc4XADataSource to the list of superclasses
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'protected javax.naming.Reference createReference()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public java.lang.String getDescription()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public javax.sql.XAConnection getXAConnection()' has been removed, but an inherited definition exists.
+INFO: 7003: org.postgresql.xa.PGXADataSource: Method 'public javax.sql.XAConnection getXAConnection(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
+
+actual public API changes:
+
+org.postgresql
+INFO: 7011: org.postgresql.Driver: Method 'public java.util.logging.Logger getParentLogger()' has been added
+ERROR: 7006: org.postgresql.Driver: Return type of method 'public java.sql.SQLException notImplemented(java.lang.Class, java.lang.String)' has been changed to java.sql.SQLFeatureNotSupportedException
+org.postgresql.ds.common
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public java.lang.String getApplicationName()' has been added
+INFO: 7011: org.postgresql.ds.common.BaseDataSource: Method 'public void setApplicationName(java.lang.String)' has been added
