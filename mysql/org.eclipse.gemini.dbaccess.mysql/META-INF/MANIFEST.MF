@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MySQL
+Bundle-Name: Gemini DBAccess module for MySQL
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.mysql
 Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.eclipse.gemini.dbaccess.mysql.Activator

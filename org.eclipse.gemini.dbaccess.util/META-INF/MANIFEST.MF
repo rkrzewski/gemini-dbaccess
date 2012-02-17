@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Util
+Bundle-Name: Gemini DBAccess Utility module
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.util
 Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: Eclipse

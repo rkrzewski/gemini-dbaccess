@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bnd-LastModified: 1328132270373
 Bundle-Activator: org.eclipse.gemini.dbaccess.postgresql.Activator
 Bundle-ManifestVersion: 2
-Bundle-Name: PostgreSQL
+Bundle-Name: Gemini DBAccess module for PostgreSQL
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-SymbolicName: org.eclipse.gemini.dbaccess.postgresql
 Bundle-Version: 1.1.0.qualifier
