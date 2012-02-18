@@ -13,6 +13,3 @@ Import-Package: javax.sql,
  org.osgi.service.jdbc;version="[1.0,2.0)",
  org.eclipse.gemini.dbaccess,
  org.eclipse.gemini.jdbc
-Bundle-ActivationPolicy: lazy
-
-
