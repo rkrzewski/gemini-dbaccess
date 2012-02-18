@@ -8,5 +8,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gemini.dbaccess,
  org.eclipse.gemini.jdbc
-Import-Package: org.osgi.service.jdbc;version="1.0.0"
+Import-Package: javax.sql,org.osgi.service.jdbc;version="1.0.0"
 
