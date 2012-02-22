@@ -18,24 +18,25 @@
 package org.eclipse.gemini.dbaccess.postgresql;
 
 import java.util.Hashtable;
-import java.util.List;
 
 import org.eclipse.gemini.dbaccess.postgresql.service.PostgreSQLServiceProperties;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
-import org.osgi.framework.wiring.BundleRevision;
-import org.osgi.framework.wiring.BundleWire;
-import org.osgi.framework.wiring.BundleWiring;
 import org.osgi.service.jdbc.DataSourceFactory;
+import org.osgi.service.packageadmin.ExportedPackage;
+import org.osgi.service.packageadmin.PackageAdmin;
+import org.osgi.util.tracker.ServiceTracker;
 
 /**
  * Creates a {@link DataSourceFactory} for PostgreSQL JDBC driver.
  */
 public class Activator implements BundleActivator {
 
-	private ServiceRegistration<DataSourceFactory> dsfService;
+	private ServiceRegistration dsfService;
+
+	private ServiceTracker packageAdminTracker;
 
 	public void start(BundleContext context) throws Exception {
 		System.out.println("Gemini DBAccess - PostgreSQL JDBC starting");
@@ -46,32 +47,40 @@ public class Activator implements BundleActivator {
 				PostgreSQLServiceProperties.DRIVER_CLASS);
 		Bundle driverBundle = findProviderOfPackage(context,
 				PostgreSQLServiceProperties.DRIVER_PACKAGE);
+		packageAdminTracker = new ServiceTracker(context,
+				PackageAdmin.class.getName(), null);
+		packageAdminTracker.open();
 		if (driverBundle != null) {
 			props.put(DataSourceFactory.OSGI_JDBC_DRIVER_VERSION, driverBundle
 					.getVersion().toString());
 		}
 
-		dsfService = context.registerService(DataSourceFactory.class,
+		dsfService = context.registerService(
+				new String[] { DataSourceFactory.class.getName() },
 				new ClientDataSourceFactory(), props);
 
 	}
 
 	public void stop(BundleContext context) throws Exception {
+		packageAdminTracker.close();
 		if (dsfService != null) {
 			dsfService.unregister();
 		}
 	}
 
 	private Bundle findProviderOfPackage(BundleContext context,
-			String packageName) {
-		BundleWiring wiring = context.getBundle().adapt(BundleWiring.class);
-		List<BundleWire> requiredWires = wiring
-				.getRequiredWires(BundleRevision.PACKAGE_NAMESPACE);
-		for (BundleWire requiredWire : requiredWires) {
-			String requiredPackage = (String) requiredWire.getCapability()
-					.getAttributes().get(BundleRevision.PACKAGE_NAMESPACE);
-			if (packageName.equals(requiredPackage)) {
-				return requiredWire.getProviderWiring().getBundle();
+			String driverPackage) {
+		PackageAdmin packageAdmin = (PackageAdmin) packageAdminTracker
+				.getService();
+		if (packageAdmin != null) {
+			ExportedPackage[] expPkgs = packageAdmin
+					.getExportedPackages(driverPackage);
+			for (ExportedPackage expPkg : expPkgs) {
+				for (Bundle impBnd : expPkg.getImportingBundles()) {
+					if (impBnd.equals(context.getBundle())) {
+						return expPkg.getExportingBundle();
+					}
+				}
 			}
 		}
 		return null;

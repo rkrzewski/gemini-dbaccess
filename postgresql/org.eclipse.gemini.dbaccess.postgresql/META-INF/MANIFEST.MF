@@ -11,8 +11,9 @@ Export-Package: org.eclipse.gemini.dbaccess.postgresql;uses:="org.osgi.f
  .xa,org.postgresql.ds,javax.sql,org.postgresql,org.eclipse.gemini.dbacc
  ess",org.eclipse.gemini.dbaccess.postgresql.service
 Import-Package: javax.sql,org.eclipse.gemini.dbaccess,org.osgi.framework
- ;version="[1.6,2)",org.osgi.framework.wiring;version="[1.0,2)",org.osgi
- .service.jdbc;version="[1.0,2)",org.postgresql;version="[3,5)",org.post
- gresql.ds;version="[3,5)",org.postgresql.xa;version="[3,5)"
+ ;version="[1.5,2)",org.osgi.util.tracker;version="[1.4,2)",org.osgi.ser
+ vice.packageadmin;version="[1.2,2)",org.osgi.service.jdbc;version="[1.0
+ ,2)",org.postgresql;version="[3,5)",org.postgresql.ds;version="[3,5)",o
+ rg.postgresql.xa;version="[3,5)"
 Tool: Bnd-1.51.0
 
