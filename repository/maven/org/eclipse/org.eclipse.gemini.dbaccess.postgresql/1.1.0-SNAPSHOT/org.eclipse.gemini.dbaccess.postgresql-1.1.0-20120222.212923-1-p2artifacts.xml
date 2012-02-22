@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='org.eclipse.gemini.dbaccess.postgresql' version='1.1.0.201202222229'>
+    <properties size='6'>
+      <property name='artifact.size' value='10302'/>
+      <property name='download.size' value='10302'/>
+      <property name='download.md5' value='7302576555d5c92d903b5443539d43ac'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.eclipse.gemini.dbaccess.postgresql'/>
+      <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

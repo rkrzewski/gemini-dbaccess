@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='org.postgresql.jdbc3' version='8.4.703'>
+    <properties size='6'>
+      <property name='artifact.size' value='3128'/>
+      <property name='download.size' value='3128'/>
+      <property name='download.md5' value='1f9303d49073f97e49f57093960d1b62'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.postgresql.jdbc3'/>
+      <property name='maven-version' value='8.4.703'/>
+    </properties>
+  </artifact>
+</artifacts>

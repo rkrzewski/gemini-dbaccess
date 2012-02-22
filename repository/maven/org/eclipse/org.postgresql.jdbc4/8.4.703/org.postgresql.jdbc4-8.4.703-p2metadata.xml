@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.postgresql.jdbc4' version='8.4.703' singleton='false'>
+    <update id='org.postgresql.jdbc4' range='[0.0.0,8.4.703)' severity='0'/>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='PostgreSQL JDBC4 Driver'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.postgresql.jdbc4'/>
+      <property name='maven-version' value='8.4.703'/>
+    </properties>
+    <provides size='13'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.postgresql.jdbc4' version='8.4.703'/>
+      <provided namespace='osgi.bundle' name='org.postgresql.jdbc4' version='8.4.703'/>
+      <provided namespace='java.package' name='org.postgresql' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.copy' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.ds' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.ds.common' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.fastpath' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.geometric' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.largeobject' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.ssl' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.util' version='4.0.0'/>
+      <provided namespace='java.package' name='org.postgresql.xa' version='4.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='19'>
+      <required namespace='java.package' name='javax.naming' range='0.0.0'/>
+      <required namespace='java.package' name='javax.naming.spi' range='0.0.0'/>
+      <required namespace='java.package' name='javax.net' range='0.0.0'/>
+      <required namespace='java.package' name='javax.net.ssl' range='0.0.0'/>
+      <required namespace='java.package' name='javax.security.auth' range='0.0.0'/>
+      <required namespace='java.package' name='javax.security.auth.callback' range='0.0.0'/>
+      <required namespace='java.package' name='javax.security.auth.login' range='0.0.0'/>
+      <required namespace='java.package' name='javax.sql' range='0.0.0'/>
+      <required namespace='java.package' name='javax.transaction.xa' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.stream' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.transform' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.transform.dom' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.transform.sax' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.transform.stax' range='0.0.0'/>
+      <required namespace='java.package' name='javax.xml.transform.stream' range='0.0.0'/>
+      <required namespace='java.package' name='org.ietf.jgss' range='0.0.0'/>
+      <required namespace='java.package' name='org.w3c.dom' range='0.0.0'/>
+      <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.postgresql.jdbc4' version='8.4.703'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-Name: PostgreSQL JDBC4 Driver&#xA;Bundle-ClassPath: .,postgresql-8.4-703.jdbc4.jar&#xA;Bundle-Version: 8.4.703&#xA;Import-Package: javax.naming,javax.naming.spi,javax.net,javax.net.ssl,javax.security.auth,javax.security.auth.callback,javax.security.auth.login,javax.sql,javax.transaction.xa,javax.xml.parsers,javax.xml.stream,javax.xml.transform,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stax,javax.xml.transform.stream,org.ietf.jgss,org.w3c.dom,org.xml.sax&#xA;Created-By: Apache Maven&#xA;Archiver-Version: Plexus Archiver&#xA;Export-Package: org.postgresql;uses:=&quot;org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy&quot;;version=&quot;4.0.0&quot;,org.postgresql.copy;uses:=&quot;org.postgresql.util,org.postgresql&quot;;version=&quot;4.0.0&quot;,org.postgresql.ds;uses:=&quot;javax.sql,org.postgresql,org.postgresql.ds.common&quot;;version=&quot;4.0.0&quot;,org.postgresql.ds.common;uses:=&quot;javax.naming,org.postgresql.ds,javax.naming.spi&quot;;version=&quot;4.0.0&quot;,org.postgresql.fastpath;uses:=&quot;org.postgresql.util&quot;;version=&quot;4.0.0&quot;,org.postgresql.geometric;uses:=&quot;org.postgresql.util&quot;;version=&quot;4.0.0&quot;,org.postgresql.largeobject;uses:=&quot;org.postgresql.fastpath,org.postgresql.util&quot;;version=&quot;4.0.0&quot;,org.postgresql.ssl;uses:=&quot;javax.net,org.postgresql.util,javax.net.ssl&quot;;version=&quot;4.0.0&quot;,org.postgresql.util;uses:=&quot;org.postgresql&quot;;version=&quot;4.0.0&quot;,org.postgresql.xa;uses:=&quot;org.postgresql.ds,org.postgresql.util,javax.sql,javax.transaction.xa,javax.naming,org.postgresql,org.postgresql.ds.common&quot;;version=&quot;4.0.0&quot;&#xA;Tool: Bnd-1.51.0&#xA;Bundle-SymbolicName: org.postgresql.jdbc4&#xA;Built-By: rafal&#xA;Manifest-Version: 1.0&#xA;Build-Jdk: 1.6.0_30&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: JavaSE-1.6&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

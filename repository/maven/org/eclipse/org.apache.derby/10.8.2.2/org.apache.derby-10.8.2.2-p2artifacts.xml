@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='org.apache.derby' version='10.8.2.2'>
+    <properties size='6'>
+      <property name='artifact.size' value='2968425'/>
+      <property name='download.size' value='2968425'/>
+      <property name='download.md5' value='8d0ed406df6d2a2691919d47c1d13079'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.apache.derby'/>
+      <property name='maven-version' value='10.8.2.2'/>
+    </properties>
+  </artifact>
+</artifacts>

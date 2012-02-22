@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='org.eclipse.gemini.dbaccess.samples' version='1.1.0.201202222229'>
+    <properties size='6'>
+      <property name='artifact.size' value='7213'/>
+      <property name='download.size' value='7213'/>
+      <property name='download.md5' value='127f0b19b04fd1435bb52a906b96134f'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.eclipse.gemini.dbaccess.samples'/>
+      <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

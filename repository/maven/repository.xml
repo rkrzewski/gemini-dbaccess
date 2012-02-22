@@ -1,0 +1,782 @@
+<repository lastmodified='20120222104219.376'>
+  <resource id='org.apache.derby/10.8.2.2' symbolicname='org.apache.derby' presentationname='Apache Derby JDBC driver' uri='org/eclipse/org.apache.derby/10.8.2.2/org.apache.derby-10.8.2.2.jar' version='10.8.2.2'>
+    <size>2968425</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.apache.derby'/>
+      <p n='presentationname' v='Apache Derby JDBC driver'/>
+      <p n='version' t='version' v='10.8.2.2'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.authentication'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.client'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.client.am'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.database'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.io'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.jdbc'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.derby.vti'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.crypto))' extend='false' multiple='false' optional='false'>Import package javax.crypto</require>
+    <require name='package' filter='(&amp;(package=javax.crypto.spec))' extend='false' multiple='false' optional='false'>Import package javax.crypto.spec</require>
+    <require name='package' filter='(&amp;(package=javax.transaction))' extend='false' multiple='false' optional='false'>Import package javax.transaction</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version=1.3.0</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.derby/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.derby' presentationname='Gemini DBAccess module for Apache Derby' uri='org/eclipse/org.eclipse.gemini.dbaccess.derby/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.derby-1.1.0-20120222.212922-1.jar' version='1.1.0.201202222229'>
+    <size>21411</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.derby'/>
+      <p n='presentationname' v='Gemini DBAccess module for Apache Derby'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.apache.derby.client.am))' extend='false' multiple='false' optional='false'>Import package org.apache.derby.client.am</require>
+    <require name='package' filter='(&amp;(package=org.apache.derby.jdbc))' extend='false' multiple='false' optional='false'>Import package org.apache.derby.jdbc</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.3,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version="[1.0,2.0)"</require>
+    <require name='package' filter='(&amp;(package=org.eclipse.gemini.dbaccess))' extend='false' multiple='false' optional='false'>Import package org.eclipse.gemini.dbaccess</require>
+    <require name='package' filter='(&amp;(package=org.eclipse.gemini.jdbc))' extend='false' multiple='false' optional='false'>Import package org.eclipse.gemini.jdbc</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.mysql/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.mysql' presentationname='Gemini DBAccess module for MySQL' uri='org/eclipse/org.eclipse.gemini.dbaccess.mysql/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.mysql-1.1.0-20120222.212923-1.jar' version='1.1.0.201202222229'>
+    <size>8392</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.mysql'/>
+      <p n='presentationname' v='Gemini DBAccess module for MySQL'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.gemini.dbaccess.mysql.service'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='uses:' v='com.mysql.jdbc,com.mysql.jdbc.jdbc2.optional,javax.sql'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=com.mysql.jdbc))' extend='false' multiple='false' optional='false'>Import package com.mysql.jdbc</require>
+    <require name='package' filter='(&amp;(package=com.mysql.jdbc.jdbc2.optional))' extend='false' multiple='false' optional='false'>Import package com.mysql.jdbc.jdbc2.optional</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.eclipse.gemini.dbaccess))' extend='false' multiple='false' optional='false'>Import package org.eclipse.gemini.dbaccess</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.3,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version="[1.0,2.0)"</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.postgresql/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.postgresql' presentationname='Gemini DBAccess module for PostgreSQL' uri='org/eclipse/org.eclipse.gemini.dbaccess.postgresql/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.postgresql-1.1.0-20120222.212923-1.jar' version='1.1.0.201202222229'>
+    <size>10302</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.postgresql'/>
+      <p n='presentationname' v='Gemini DBAccess module for PostgreSQL'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.gemini.dbaccess.postgresql'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='uses:' v='org.osgi.framework.wiring,org.osgi.framework,org.osgi.service.jdbc,org.postgresql.xa,org.postgresql.ds,javax.sql,org.postgresql,org.eclipse.gemini.dbaccess'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.gemini.dbaccess.postgresql.service'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.eclipse.gemini.dbaccess))' extend='false' multiple='false' optional='false'>Import package org.eclipse.gemini.dbaccess</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.5,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.util.tracker;version="[1.4,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.packageadmin;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.postgresql)(version&gt;=3.0.0)(!(version&gt;=5.0.0)))' extend='false' multiple='false' optional='false'>Import package org.postgresql;version="[3,5)"</require>
+    <require name='package' filter='(&amp;(package=org.postgresql.ds)(version&gt;=3.0.0)(!(version&gt;=5.0.0)))' extend='false' multiple='false' optional='false'>Import package org.postgresql.ds;version="[3,5)"</require>
+    <require name='package' filter='(&amp;(package=org.postgresql.xa)(version&gt;=3.0.0)(!(version&gt;=5.0.0)))' extend='false' multiple='false' optional='false'>Import package org.postgresql.xa;version="[3,5)"</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.samples/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.samples' presentationname='Gemini DBAccess Samples' uri='org/eclipse/org.eclipse.gemini.dbaccess.samples/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.samples-1.1.0-20120222.212923-1.jar' version='1.1.0.201202222229'>
+    <size>7213</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.samples'/>
+      <p n='presentationname' v='Gemini DBAccess Samples'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version=1.3.0</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version=1.0.0</require>
+    <require name='package' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.util.tracker;version=1.4</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.test/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.test' presentationname='Gemini DBAccess Tests' uri='org/eclipse/org.eclipse.gemini.dbaccess.test/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.test-1.1.0-20120222.212925-1.jar' version='1.1.0.201202222229'>
+    <size>10701</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.test'/>
+      <p n='presentationname' v='Gemini DBAccess Tests'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.junit)(version&gt;=4.5.0))' extend='false' multiple='false' optional='false'>Import package org.junit;version=4.5.0</require>
+    <require name='package' filter='(&amp;(package=org.junit.runner)(version&gt;=4.5.0))' extend='false' multiple='false' optional='false'>Import package org.junit.runner;version=4.5.0</require>
+    <require name='package' filter='(&amp;(package=org.junit.runner.notification)(version&gt;=4.5.0))' extend='false' multiple='false' optional='false'>Import package org.junit.runner.notification;version=4.5.0</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version=1.5.0</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version=1.0.0</require>
+    <require name='package' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.util.tracker;version=1.4</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='org.eclipse.gemini.dbaccess.util/1.1.0.201202222229' symbolicname='org.eclipse.gemini.dbaccess.util' presentationname='Gemini DBAccess Utility module' uri='org/eclipse/org.eclipse.gemini.dbaccess.util/1.1.0-SNAPSHOT/org.eclipse.gemini.dbaccess.util-1.1.0-20120222.212921-1.jar' version='1.1.0.201202222229'>
+    <size>14780</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.eclipse.gemini.dbaccess.util'/>
+      <p n='presentationname' v='Gemini DBAccess Utility module'/>
+      <p n='version' t='version' v='1.1.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.gemini.dbaccess'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.gemini.jdbc'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.jdbc;version=1.0.0</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='com.mysql.jdbc/0.0.0.201202222229' symbolicname='com.mysql.jdbc' presentationname='Mock MySQL JDBC Driver' uri='org/eclipse/com.mysql.jdbc/0.0.0-SNAPSHOT/com.mysql.jdbc-0.0.0-20120222.212923-1.jar' version='0.0.0.201202222229'>
+    <size>7876</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='com.mysql.jdbc'/>
+      <p n='presentationname' v='Mock MySQL JDBC Driver'/>
+      <p n='version' t='version' v='0.0.0.201202222229'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mysql.jdbc'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mysql.jdbc.jdbc2.optional'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='osgi.enterprise/4.2.0.201003190513' symbolicname='osgi.enterprise' presentationname='osgi.enterprise' uri='org/eclipse/osgi.enterprise/4.2.0.201003190513/osgi.enterprise-4.2.0.201003190513.jar' version='4.2.0.201003190513'>
+    <description>OSGi Service Platform Release 4 Version 4.2, Enterprise Interfaces and Classes for use in compiling bundles.</description>
+    <size>301613</size>
+    <license>http://opensource.org/licenses/apache2.0.php; link="http://www.apache.org/licenses/LICENSE-2.0"; description="Apache License, Version 2.0"</license>
+    <capability name='bundle'>
+      <p n='symbolicname' v='osgi.enterprise'/>
+      <p n='presentationname' v='osgi.enterprise'/>
+      <p n='version' t='version' v='4.2.0.201003190513'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx.service.cm'/>
+      <p n='version' t='version' v='1.3.0'/>
+      <p n='uses:' v='javax.management.openmbean'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx.framework'/>
+      <p n='version' t='version' v='1.5.0'/>
+      <p n='uses:' v='org.osgi.jmx,javax.management.openmbean'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx.service.permissionadmin'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx.service.provisioning'/>
+      <p n='version' t='version' v='1.2.0'/>
+      <p n='uses:' v='javax.management.openmbean'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx.service.useradmin'/>
+      <p n='version' t='version' v='1.1.0'/>
+      <p n='uses:' v='org.osgi.jmx,javax.management.openmbean'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.jmx'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='javax.management.openmbean'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.blueprint.reflect'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.blueprint.container'/>
+      <p n='version' t='version' v='1.0.1'/>
+      <p n='uses:' v='org.osgi.service.blueprint.reflect,org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.cm'/>
+      <p n='version' t='version' v='1.3.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.component'/>
+      <p n='version' t='version' v='1.1.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.event'/>
+      <p n='version' t='version' v='1.2.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.http'/>
+      <p n='version' t='version' v='1.2.1'/>
+      <p n='uses:' v='javax.servlet.http,javax.servlet'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.provisioning'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.remoteserviceadmin'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.jdbc'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='javax.sql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.jndi'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='javax.naming.directory,javax.naming'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.jpa'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='jpa' v='2.0'/>
+      <p n='uses:' v='javax.persistence'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.log'/>
+      <p n='version' t='version' v='1.3.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.metatype'/>
+      <p n='version' t='version' v='1.1.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.useradmin'/>
+      <p n='version' t='version' v='1.1.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.tracker'/>
+      <p n='version' t='version' v='1.4.0'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.xml'/>
+      <p n='version' t='version' v='1.0.1'/>
+      <p n='uses:' v='org.osgi.framework,javax.xml.parsers'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.management.openmbean))' extend='false' multiple='false' optional='true'>Import package javax.management.openmbean;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='true'>Import package javax.naming;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.naming.directory))' extend='false' multiple='false' optional='true'>Import package javax.naming.directory;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.persistence))' extend='false' multiple='false' optional='true'>Import package javax.persistence;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.servlet))' extend='false' multiple='false' optional='true'>Import package javax.servlet;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.servlet.http))' extend='false' multiple='false' optional='true'>Import package javax.servlet.http;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='true'>Import package javax.sql;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='true'>Import package javax.xml.parsers;resolution:=optional</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.framework;resolution:=optional;version="[1.5,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx.framework;resolution:=optional;version="[1.5,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx.service.cm)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx.service.cm;resolution:=optional;version="[1.3,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx.service.permissionadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx.service.permissionadmin;resolution:=optional;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx.service.provisioning)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx.service.provisioning;resolution:=optional;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.jmx.service.useradmin)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.jmx.service.useradmin;resolution:=optional;version="[1.1,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.blueprint.container)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.blueprint.container;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.blueprint.reflect)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.blueprint.reflect;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.cm;resolution:=optional;version="[1.3,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.component;resolution:=optional;version="[1.1,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.event;resolution:=optional;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.http)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.http;resolution:=optional;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.jdbc;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jndi)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.jndi;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.jpa)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.jpa;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.log;resolution:=optional;version="[1.3,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.metatype)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.metatype;resolution:=optional;version="[1.1,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.provisioning)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.provisioning;resolution:=optional;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.remoteserviceadmin)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.remoteserviceadmin;resolution:=optional;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.useradmin)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.service.useradmin;resolution:=optional;version="[1.1,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.util.tracker;resolution:=optional;version="[1.4,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.util.xml)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='true'>Import package org.osgi.util.xml;resolution:=optional;version="[1.0,2)"</require>
+  </resource>
+  <resource id='org.postgresql.jdbc3/9.0.802' symbolicname='org.postgresql.jdbc3' presentationname='PostgreSQL JDBC3 Driver' uri='org/eclipse/org.postgresql.jdbc3/9.0.802/org.postgresql.jdbc3-9.0.802.jar' version='9.0.802'>
+    <size>482389</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc3'/>
+      <p n='presentationname' v='PostgreSQL JDBC3 Driver'/>
+      <p n='version' t='version' v='9.0.802'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.sql,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='3.1.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.ds,javax.sql,org.postgresql,javax.transaction.xa,javax.naming,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.postgresql.jdbc3/9.1.901' symbolicname='org.postgresql.jdbc3' presentationname='PostgreSQL JDBC3 Driver' uri='org/eclipse/org.postgresql.jdbc3/9.1.901/org.postgresql.jdbc3-9.1.901.jar' version='9.1.901'>
+    <size>485402</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc3'/>
+      <p n='presentationname' v='PostgreSQL JDBC3 Driver'/>
+      <p n='version' t='version' v='9.1.901'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='3.1.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.sql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='3.2.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.ds,javax.sql,org.postgresql,javax.transaction.xa,javax.naming,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.postgresql.jdbc3/8.4.703' symbolicname='org.postgresql.jdbc3' presentationname='PostgreSQL JDBC3 Driver' uri='org/eclipse/org.postgresql.jdbc3/8.4.703/org.postgresql.jdbc3-8.4.703.jar' version='8.4.703'>
+    <size>3128</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc3'/>
+      <p n='presentationname' v='PostgreSQL JDBC3 Driver'/>
+      <p n='version' t='version' v='8.4.703'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.sql,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='uses:' v='org.postgresql.ds,org.postgresql.util,javax.sql,javax.transaction.xa,javax.naming,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='ee' filter='(|(ee=J2SE-1.5))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=J2SE-1.5))</require>
+  </resource>
+  <resource id='org.postgresql.jdbc4/9.0.802' symbolicname='org.postgresql.jdbc4' presentationname='PostgreSQL JDBC4 Driver' uri='org/eclipse/org.postgresql.jdbc4/9.0.802/org.postgresql.jdbc4-9.0.802.jar' version='9.0.802'>
+    <size>517676</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc4'/>
+      <p n='presentationname' v='PostgreSQL JDBC4 Driver'/>
+      <p n='version' t='version' v='9.0.802'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.sql,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='4.1.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.ds,javax.sql,org.postgresql,javax.transaction.xa,javax.naming,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=javax.xml.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.stream</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.dom))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.dom</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.sax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.sax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stream</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+    <require name='package' filter='(&amp;(package=org.xml.sax))' extend='false' multiple='false' optional='false'>Import package org.xml.sax</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='org.postgresql.jdbc4/9.1.901' symbolicname='org.postgresql.jdbc4' presentationname='PostgreSQL JDBC4 Driver' uri='org/eclipse/org.postgresql.jdbc4/9.1.901/org.postgresql.jdbc4-9.1.901.jar' version='9.1.901'>
+    <size>524323</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc4'/>
+      <p n='presentationname' v='PostgreSQL JDBC4 Driver'/>
+      <p n='version' t='version' v='9.1.901'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='4.1.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.sql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='4.2.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.ds,javax.sql,org.postgresql,javax.transaction.xa,javax.naming,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=javax.xml.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.stream</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.dom))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.dom</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.sax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.sax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stream</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+    <require name='package' filter='(&amp;(package=org.xml.sax))' extend='false' multiple='false' optional='false'>Import package org.xml.sax</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+  <resource id='org.postgresql.jdbc4/8.4.703' symbolicname='org.postgresql.jdbc4' presentationname='PostgreSQL JDBC4 Driver' uri='org/eclipse/org.postgresql.jdbc4/8.4.703/org.postgresql.jdbc4-8.4.703.jar' version='8.4.703'>
+    <size>514479</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='org.postgresql.jdbc4'/>
+      <p n='presentationname' v='PostgreSQL JDBC4 Driver'/>
+      <p n='version' t='version' v='8.4.703'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql.largeobject,org.postgresql.fastpath,org.postgresql.copy'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.copy'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util,org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.sql,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ds.common'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.naming,org.postgresql.ds,javax.naming.spi'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.fastpath'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.geometric'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.largeobject'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.fastpath,org.postgresql.util'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.ssl'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='javax.net,org.postgresql.util,javax.net.ssl'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.util'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.postgresql.xa'/>
+      <p n='version' t='version' v='4.0.0'/>
+      <p n='uses:' v='org.postgresql.ds,org.postgresql.util,javax.sql,javax.transaction.xa,javax.naming,org.postgresql,org.postgresql.ds.common'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.naming))' extend='false' multiple='false' optional='false'>Import package javax.naming</require>
+    <require name='package' filter='(&amp;(package=javax.naming.spi))' extend='false' multiple='false' optional='false'>Import package javax.naming.spi</require>
+    <require name='package' filter='(&amp;(package=javax.net))' extend='false' multiple='false' optional='false'>Import package javax.net</require>
+    <require name='package' filter='(&amp;(package=javax.net.ssl))' extend='false' multiple='false' optional='false'>Import package javax.net.ssl</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth))' extend='false' multiple='false' optional='false'>Import package javax.security.auth</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.callback))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.callback</require>
+    <require name='package' filter='(&amp;(package=javax.security.auth.login))' extend='false' multiple='false' optional='false'>Import package javax.security.auth.login</require>
+    <require name='package' filter='(&amp;(package=javax.sql))' extend='false' multiple='false' optional='false'>Import package javax.sql</require>
+    <require name='package' filter='(&amp;(package=javax.transaction.xa))' extend='false' multiple='false' optional='false'>Import package javax.transaction.xa</require>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=javax.xml.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.stream</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.dom))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.dom</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.sax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.sax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stax))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stax</require>
+    <require name='package' filter='(&amp;(package=javax.xml.transform.stream))' extend='false' multiple='false' optional='false'>Import package javax.xml.transform.stream</require>
+    <require name='package' filter='(&amp;(package=org.ietf.jgss))' extend='false' multiple='false' optional='false'>Import package org.ietf.jgss</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+    <require name='package' filter='(&amp;(package=org.xml.sax))' extend='false' multiple='false' optional='false'>Import package org.xml.sax</require>
+    <require name='ee' filter='(|(ee=JavaSE-1.6))' extend='false' multiple='false' optional='false'>Execution Environment (|(ee=JavaSE-1.6))</require>
+  </resource>
+</repository>

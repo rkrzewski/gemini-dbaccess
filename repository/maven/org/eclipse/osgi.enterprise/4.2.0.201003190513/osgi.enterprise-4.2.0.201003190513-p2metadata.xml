@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='osgi.enterprise' version='4.2.0.201003190513' singleton='false'>
+    <update id='osgi.enterprise' range='[0.0.0,4.2.0.201003190513)' severity='0'/>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='osgi.enterprise'/>
+      <property name='org.eclipse.equinox.p2.description' value='OSGi Service Platform Release 4 Version 4.2, Enterprise Interfaces and Classes for use in compiling bundles.'/>
+      <property name='org.eclipse.equinox.p2.provider' value='OSGi Alliance'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='osgi.enterprise'/>
+      <property name='maven-version' value='4.2.0.201003190513'/>
+    </properties>
+    <provides size='25'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='osgi.enterprise' version='4.2.0.201003190513'/>
+      <provided namespace='osgi.bundle' name='osgi.enterprise' version='4.2.0.201003190513'/>
+      <provided namespace='java.package' name='org.osgi.jmx.service.cm' version='1.3.0'/>
+      <provided namespace='java.package' name='org.osgi.jmx.framework' version='1.5.0'/>
+      <provided namespace='java.package' name='org.osgi.jmx.service.permissionadmin' version='1.2.0'/>
+      <provided namespace='java.package' name='org.osgi.jmx.service.provisioning' version='1.2.0'/>
+      <provided namespace='java.package' name='org.osgi.jmx.service.useradmin' version='1.1.0'/>
+      <provided namespace='java.package' name='org.osgi.jmx' version='1.0.0'/>
+      <provided namespace='java.package' name='org.osgi.service.blueprint.reflect' version='1.0.1'/>
+      <provided namespace='java.package' name='org.osgi.service.blueprint.container' version='1.0.1'/>
+      <provided namespace='java.package' name='org.osgi.service.cm' version='1.3.0'/>
+      <provided namespace='java.package' name='org.osgi.service.component' version='1.1.0'/>
+      <provided namespace='java.package' name='org.osgi.service.event' version='1.2.0'/>
+      <provided namespace='java.package' name='org.osgi.service.http' version='1.2.1'/>
+      <provided namespace='java.package' name='org.osgi.service.provisioning' version='1.2.0'/>
+      <provided namespace='java.package' name='org.osgi.service.remoteserviceadmin' version='1.0.0'/>
+      <provided namespace='java.package' name='org.osgi.service.jdbc' version='1.0.0'/>
+      <provided namespace='java.package' name='org.osgi.service.jndi' version='1.0.0'/>
+      <provided namespace='java.package' name='org.osgi.service.jpa' version='1.0.0'/>
+      <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+      <provided namespace='java.package' name='org.osgi.service.metatype' version='1.1.0'/>
+      <provided namespace='java.package' name='org.osgi.service.useradmin' version='1.1.0'/>
+      <provided namespace='java.package' name='org.osgi.util.tracker' version='1.4.0'/>
+      <provided namespace='java.package' name='org.osgi.util.xml' version='1.0.1'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='31'>
+      <required namespace='java.package' name='javax.management.openmbean' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.naming' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.naming.directory' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.persistence' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.servlet' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.servlet.http' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.sql' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='javax.xml.parsers' range='0.0.0' optional='true'/>
+      <required namespace='java.package' name='org.osgi.framework' range='[1.5.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx.framework' range='[1.5.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx.service.cm' range='[1.3.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx.service.permissionadmin' range='[1.2.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx.service.provisioning' range='[1.2.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.jmx.service.useradmin' range='[1.1.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.blueprint.container' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.blueprint.reflect' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.cm' range='[1.3.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.component' range='[1.1.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.event' range='[1.2.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.http' range='[1.2.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.jdbc' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.jndi' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.jpa' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.log' range='[1.3.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.metatype' range='[1.1.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.provisioning' range='[1.2.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.remoteserviceadmin' range='[1.0.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.service.useradmin' range='[1.1.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.util.tracker' range='[1.4.0,2.0.0)' optional='true'/>
+      <required namespace='java.package' name='org.osgi.util.xml' range='[1.0.0,2.0.0)' optional='true'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='osgi.enterprise' version='4.2.0.201003190513'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-ManifestVersion: 2&#xA;Created-By: 1.6.0_18 (Sun Microsystems Inc.)&#xA;Archiver-Version: Plexus Archiver&#xA;Manifest-Version: 1.0&#xA;Build-Jdk: 1.6.0_30&#xA;Bundle-SymbolicName: osgi.enterprise&#xA;Import-Package: javax.management.openmbean;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.persistence;resolution:=optional,javax.servlet;resolution:=optional,javax.servlet.http;resolution:=optional,javax.sql;resolution:=optional,javax.xml.parsers;resolution:=optional,org.osgi.framework;resolution:=optional;version=&quot;[1.5,2)&quot;,org.osgi.jmx;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.jmx.framework;resolution:=optional;version=&quot;[1.5,2)&quot;,org.osgi.jmx.service.cm;resolution:=optional;version=&quot;[1.3,2)&quot;,org.osgi.jmx.service.permissionadmin;resolution:=optional;version=&quot;[1.2,2)&quot;,org.osgi.jmx.service.provisioning;resolution:=optional;version=&quot;[1.2,2)&quot;,org.osgi.jmx.service.useradmin;resolution:=optional;version=&quot;[1.1,2)&quot;,org.osgi.service.blueprint.container;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.blueprint.reflect;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.cm;resolution:=optional;version=&quot;[1.3,2)&quot;,org.osgi.service.component;resolution:=optional;version=&quot;[1.1,2)&quot;,org.osgi.service.event;resolution:=optional;version=&quot;[1.2,2)&quot;,org.osgi.service.http;resolution:=optional;version=&quot;[1.2,2)&quot;,org.osgi.service.jdbc;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.jndi;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.jpa;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.log;resolution:=optional;version=&quot;[1.3,2)&quot;,org.osgi.service.metatype;resolution:=optional;version=&quot;[1.1,2)&quot;,org.osgi.service.provisioning;resolution:=optional;version=&quot;[1.2,2)&quot;,org.osgi.service.remoteserviceadmin;resolution:=optional;version=&quot;[1.0,2)&quot;,org.osgi.service.useradmin;resolution:=optional;version=&quot;[1.1,2)&quot;,org.osgi.util.tracker;resolution:=optional;version=&quot;[1.4,2)&quot;,org.osgi.util.xml;resolution:=optional;version=&quot;[1.0,2)&quot;&#xA;Bundle-License: http://opensource.org/licenses/apache2.0.php; link=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;; description=&quot;Apache License, Version 2.0&quot;&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-ClassPath: osgi.enterprise.jar&#xA;Tool: Bnd-0.0.386&#xA;Bundle-Copyright: Copyright (c) OSGi Alliance (2000, 2010). All Rights Reserved.&#xA;Bundle-Description: OSGi Service Platform Release 4 Version 4.2, Enterprise Interfaces and Classes for use in compiling bundles.&#xA;Built-By: rafal&#xA;Bundle-Version: 4.2.0.201003190513&#xA;Export-Package: org.osgi.jmx.service.cm;uses:=&quot;javax.management.openmbean&quot;;version=&quot;1.3&quot;,org.osgi.jmx.framework;uses:=&quot;org.osgi.jmx,javax.management.openmbean&quot;;version=&quot;1.5&quot;,org.osgi.jmx.service.permissionadmin;version=&quot;1.2&quot;,org.osgi.jmx.service.provisioning;uses:=&quot;javax.management.openmbean&quot;;version=&quot;1.2&quot;,org.osgi.jmx.service.useradmin;uses:=&quot;org.osgi.jmx,javax.management.openmbean&quot;;version=&quot;1.1&quot;,org.osgi.jmx;uses:=&quot;javax.management.openmbean&quot;;version=&quot;1.0&quot;,org.osgi.service.blueprint.reflect;version=&quot;1.0.1&quot;,org.osgi.service.blueprint.container;uses:=&quot;org.osgi.service.blueprint.reflect,org.osgi.framework&quot;;version=&quot;1.0.1&quot;,org.osgi.service.cm;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.3&quot;,org.osgi.service.component;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.1&quot;,org.osgi.service.event;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.2&quot;,org.osgi.service.http;uses:=&quot;javax.servlet.http,javax.servlet&quot;;version=&quot;1.2.1&quot;,org.osgi.service.provisioning;version=&quot;1.2&quot;,org.osgi.service.remoteserviceadmin;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.0&quot;,org.osgi.service.jdbc;uses:=&quot;javax.sql&quot;;version=&quot;1.0&quot;,org.osgi.service.jndi;uses:=&quot;javax.naming.directory,javax.naming&quot;;version=&quot;1.0&quot;,org.osgi.service.jpa;uses:=&quot;javax.persistence&quot;;version=&quot;1.0&quot;;jpa=&quot;2.0&quot;,org.osgi.service.log;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.3&quot;,org.osgi.service.metatype;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.1&quot;,org.osgi.service.useradmin;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.1&quot;,org.osgi.util.tracker;uses:=&quot;org.osgi.framework&quot;;version=&quot;1.4&quot;,org.osgi.util.xml;uses:=&quot;org.osgi.framework,javax.xml.parsers&quot;;version=&quot;1.0.1&quot;&#xA;Bnd-LastModified: 1269033188762&#xA;Bundle-Name: osgi.enterprise&#xA;DynamicImport-Package: *&#xA;Bundle-Vendor: OSGi Alliance&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

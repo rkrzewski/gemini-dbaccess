@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='org.eclipse.update.feature' id='org.eclipse.gemini.dbaccess.feature' version='1.1.0.201202222229'>
+    <properties size='7'>
+      <property name='artifact.size' value='16132'/>
+      <property name='download.size' value='16132'/>
+      <property name='download.md5' value='e53b72b099804fb766259a92d2490f93'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='org.eclipse.gemini.dbaccess.feature'/>
+      <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+</artifacts>

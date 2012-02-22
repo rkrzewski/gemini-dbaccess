@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='com.mysql.jdbc' version='0.0.0.201202222229' singleton='false'>
+    <update id='com.mysql.jdbc' range='[0.0.0,0.0.0.201202222229)' severity='0'/>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='Mock MySQL JDBC Driver'/>
+      <property name='maven-groupId' value='org.eclipse'/>
+      <property name='maven-artifactId' value='com.mysql.jdbc'/>
+      <property name='maven-version' value='0.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.mysql.jdbc' version='0.0.0.201202222229'/>
+      <provided namespace='osgi.bundle' name='com.mysql.jdbc' version='0.0.0.201202222229'/>
+      <provided namespace='java.package' name='com.mysql.jdbc' version='0.0.0'/>
+      <provided namespace='java.package' name='com.mysql.jdbc.jdbc2.optional' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='java.package' name='javax.sql' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='com.mysql.jdbc' version='0.0.0.201202222229'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-ManifestVersion: 2&#xA;Built-By: rafal&#xA;Export-Package: com.mysql.jdbc,com.mysql.jdbc.jdbc2.optional&#xA;Bundle-RequiredExecutionEnvironment: JavaSE-1.6&#xA;Archiver-Version: Plexus Archiver&#xA;Build-Jdk: 1.6.0_30&#xA;Bundle-Name: Mock MySQL JDBC Driver&#xA;Bundle-Version: 0.0.0.201202222229&#xA;Bundle-SymbolicName: com.mysql.jdbc&#xA;Import-Package: javax.sql&#xA;Created-By: Apache Maven&#xA;Manifest-Version: 1.0&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
