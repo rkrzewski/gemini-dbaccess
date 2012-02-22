@@ -36,12 +36,20 @@
 	<module>../org.eclipse.gemini.dbaccess.util</module>
 	<module>../derby/org.apache.derby</module>
 	<module>../derby/org.eclipse.gemini.dbaccess.derby</module>
+	<module>../postgresql/org.postgresql.jdbc3-8.4</module>
+	<module>../postgresql/org.postgresql.jdbc3-9.0</module>
+	<module>../postgresql/org.postgresql.jdbc3-9.1</module>
+	<module>../postgresql/org.postgresql.jdbc4-8.4</module>
+	<module>../postgresql/org.postgresql.jdbc4-9.0</module>
+	<module>../postgresql/org.postgresql.jdbc4-9.1</module>
+	<module>../postgresql/org.eclipse.gemini.dbaccess.postgresql</module>
 	<module>../mysql/com.mysql.jdbc</module>
 	<module>../mysql/org.eclipse.gemini.dbaccess.mysql</module>
 	<module>../samples/org.eclipse.gemini.dbaccess.samples</module>
 	<module>../test/org.eclipse.gemini.dbaccess.test</module>
 	<module>../gemini.dbaccess.feature</module>
 	<module>../gemini.dbaccess.mysql.feature</module>
+	<module>../gemini.dbaccess.postgresql.feature</module>
 	<module>../gemini.dbaccess.updatesite</module>
   </modules>
 
