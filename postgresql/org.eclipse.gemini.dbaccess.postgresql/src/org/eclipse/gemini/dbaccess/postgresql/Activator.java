@@ -45,11 +45,11 @@ public class Activator implements BundleActivator {
 				PostgreSQLServiceProperties.DRIVER_NAME);
 		props.put(DataSourceFactory.OSGI_JDBC_DRIVER_CLASS,
 				PostgreSQLServiceProperties.DRIVER_CLASS);
-		Bundle driverBundle = findProviderOfPackage(context,
-				PostgreSQLServiceProperties.DRIVER_PACKAGE);
 		packageAdminTracker = new ServiceTracker(context,
 				PackageAdmin.class.getName(), null);
 		packageAdminTracker.open();
+		Bundle driverBundle = findProviderOfPackage(context,
+				PostgreSQLServiceProperties.DRIVER_PACKAGE);
 		if (driverBundle != null) {
 			props.put(DataSourceFactory.OSGI_JDBC_DRIVER_VERSION, driverBundle
 					.getVersion().toString());
